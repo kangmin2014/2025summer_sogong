@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Coiny-Regular';
+    src: url(.\fonts\Coiny-Regular.ttf);
+}
+
 .log-in-page {
     background-color: #ffffff;
     display: flex;
@@ -41,7 +46,7 @@
     gap: 36px;
     left: 477px;
     position: absolute;
-    top: 390px;
+    top: 450px;
     width: 486px;
 }
 
@@ -56,6 +61,21 @@
 }
 
 .log-in-page .text-wrapper-2 {
+    padding-bottom: 6px;
+    text-align: left;
+    align-self: stretch;
+    color: #000000;
+    font-family: "Pretendard-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+}
+
+.log-in-page .text-wrapper-2-1 {
+    text-align: left;
     align-self: stretch;
     color: #000000;
     font-family: "Pretendard-Regular", Helvetica;
@@ -217,6 +237,7 @@
     position: relative;
     white-space: nowrap;
     width: fit-content;
+    margin-bottom: 0;
 }
 
 .log-in-page .img {
@@ -266,7 +287,7 @@
     display: flex;
     gap: 263px;
     height: 56px;
-    padding: 8px 0px 8px 24px;
+    padding: -1px 0px 8px 24px;
     position: relative;
     width: 486px;
 }
@@ -281,6 +302,8 @@
     position: relative;
     white-space: nowrap;
     width: fit-content;
+    padding-left: 25px;
+    padding-bottom: 3px;
 }
 
 .log-in-page .vector {

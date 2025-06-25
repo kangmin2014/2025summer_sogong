@@ -21,7 +21,7 @@ export const LogInPage = () => {
                     </div>
 
                     <div className="password">
-                        <div className="text-wrapper-2">비밀번호</div>
+                        <div className="text-wrapper-2-1">비밀번호</div>
 
                         <div className="password-box" />
 
