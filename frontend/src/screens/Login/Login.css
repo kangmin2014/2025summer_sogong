@@ -1,0 +1,54 @@
+/* LogIn.css */
+
+.login-page {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.login-wrapper {
+  background-color: white;
+  width: 1440px;
+  height: 1238px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.login-background {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  top: 0;
+  left: 0;
+}
+
+.login-blank {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.login-logo {
+  position: absolute;
+  top: 275px;
+  left: 603px;
+  font-family: 'Coiny', Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.logo-green {
+  color: #37d429;
+}
+
+.logo-yellow {
+  color: #ffd400;
+}

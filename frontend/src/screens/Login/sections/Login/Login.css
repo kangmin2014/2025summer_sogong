@@ -1,0 +1,82 @@
+/* Login.css */
+
+.login-container {
+  width: 486px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  position: absolute;
+  top: 390px;
+  left: 477px;
+  align-items: center;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.login-label {
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+.login-input {
+  width: 100%;
+  height: 48px;
+  background-color: white;
+  border: 1px solid #989999;
+  border-radius: 8px;
+}
+
+.login-forgot {
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #ff0500;
+  text-align: right;
+  width: 100%;
+}
+
+.login-button {
+  width: 384px;
+  height: 48px;
+  background-color: black;
+  border: 1px solid #989999;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.login-button-text {
+  font-family: 'Pretendard-Medium', Helvetica, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: white;
+  white-space: nowrap;
+}
+
+.login-signup {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.signup-prompt {
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 1rem;
+  color: black;
+  white-space: nowrap;
+}
+
+.signup-link {
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #ff0000;
+  white-space: nowrap;
+}

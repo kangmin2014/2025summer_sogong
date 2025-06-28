@@ -1,0 +1,9 @@
+/* Header.css */
+
+.custom-header {
+  flex-wrap: nowrap !important;
+  position: absolute !important;
+  left: 1px !important;
+  background-color: transparent !important;
+  top: 0 !important;
+}
