@@ -1,7 +1,7 @@
 // LogIn.jsx
 import React from "react";
-import { Footer } from "./sections/Footer";
-import { Header } from "./sections/Header";
+import { Footer } from "../Common/Footer";
+import { Header } from "../Common/Header";
 import { Login } from "./sections/Login";
 import "./LogIn.css";
 
