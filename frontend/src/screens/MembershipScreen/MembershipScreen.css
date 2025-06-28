@@ -1,0 +1,48 @@
+/* MembershipScreen.css */
+
+.membership-page {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  min-width: 1440px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.membership-wrapper {
+  background-color: white;
+  width: 100%;
+  height: 1238px;
+  overflow-x: hidden;
+}
+
+.membership-inner {
+  position: relative;
+  width: 100%;
+  height: 1238px;
+}
+
+.membership-background {
+  position: absolute;
+  width: 100%;
+  height: 1238px;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.membership-title {
+  position: absolute;
+  top: 275px;
+  /* left: 637px; */
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: 'Pretendard-Bold', Helvetica, sans-serif;
+  font-size: 36px; /* text-5xl */
+  font-weight: bold;
+  color: black;
+  white-space: nowrap;
+}

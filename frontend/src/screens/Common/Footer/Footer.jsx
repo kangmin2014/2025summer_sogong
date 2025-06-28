@@ -31,11 +31,11 @@ export const Footer = () => {
           alt="Line"
           src="https://c.animaapp.com/vPMKbFT7/img/line.svg"
         />
-      </div>
 
-      <p className="footer-copyright">
-        © 2025 By TEAMO Inc. All Rights Reserved.
-      </p>
+        <p className="footer-copyright">
+          © 2025 By TEAMO Inc. All Rights Reserved.
+        </p>
+      </div>
     </footer>
   );
 };

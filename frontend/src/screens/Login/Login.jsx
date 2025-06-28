@@ -12,12 +12,15 @@ export const LogIn = () => {
         <div className="login-background">
           <div className="login-blank" />
 
-          <p className="login-logo">
-            <span className="logo-green">TEAM</span>
-            <span className="logo-yellow">O</span>
-          </p>
+          <div className="login-content">
+            <p className="login-logo">
+              <span className="logo-green">TEAM</span>
+              <span className="logo-yellow">O</span>
+            </p>
 
-          <Login />
+            <Login />
+          </div>
+
           <Header />
         </div>
 

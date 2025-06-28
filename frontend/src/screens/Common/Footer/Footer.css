@@ -3,8 +3,8 @@
 .footer-container {
   display: flex;
   flex-direction: column;
-  width: 1440px;
-  align-items: flex-start;
+  width: 100%;
+  align-items: center;
   gap: 24px;
   padding: 36px 120px;
   position: absolute;
@@ -12,6 +12,9 @@
   left: 0;
   background-color: #f8f8f8;
   border-top: 1px solid black;
+
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .footer-content {
@@ -20,6 +23,7 @@
   align-items: flex-start;
   gap: 16px;
   width: 100%;
+  max-width: 1440px;
 }
 
 .footer-title {

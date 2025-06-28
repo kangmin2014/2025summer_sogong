@@ -1,13 +1,17 @@
 /* Login.css */
 
 .login-container {
-  width: 486px;
+  max-width: 486px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 36px;
   position: absolute;
   top: 390px;
-  left: 477px;
+  /* left: 477px; */
+  left: 50%;
+  transform: translateX(-50%);
+
   align-items: center;
 }
 
