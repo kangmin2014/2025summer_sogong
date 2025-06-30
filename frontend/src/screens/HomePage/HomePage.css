@@ -1,0 +1,78 @@
+.home-logout {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.home-logout .overlap-group-wrapper {
+  flex: 1;
+  background-color: #ffffff;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+}
+
+.center-group {
+  width: 1200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.home-logout .overlap-group {
+  flex: 1;
+  width: 100%;
+  background-color: #ffffff;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.home-logout .best-review {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 918px;
+  position: absolute;
+  top: 918px;
+  width: 282px;
+  padding-bottom: 300px;
+}
+
+.home-logout .design-component-instance-node-3 {
+  align-self: stretch !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+}
+
+.home-logout .review-box-instance {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+.banner-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+  width: 100%;
+  margin-top: 236px; /* 기존 top: 236px 대체 */
+  position: relative; /* 절대 위치 제거 */
+}
+
+.banner-login .swiper-slide {
+  height: 180px;
+  width: 894px;
+  object-fit: cover;
+  position: relative;
+  display: block;
+}

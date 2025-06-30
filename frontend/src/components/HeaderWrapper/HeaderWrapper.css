@@ -59,13 +59,13 @@
 .nav-links {
   display: inline-flex;
   align-items: center;
-  gap: 80px;
+  gap: 70px;
 }
 
 .nav-item {
   font-family: 'Pretendard-Bold', Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 1.5rem; /* 2xl */
+  font-size: 1.5rem;
   color: black;
 }
 

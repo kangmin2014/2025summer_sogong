@@ -1,0 +1,88 @@
+.hot-recruit-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 282px;
+  min-height: 212px;
+  padding: 16px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 상단 영역 */
+.hot-recruit-posts .content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* D-day 컴포넌트 */
+.hot-recruit-posts .dday-component {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e86360;
+  border-radius: 48px;
+  height: 28px;
+  width: 60px;
+  padding: 0 10px;
+}
+
+.hot-recruit-posts .text-wrapper {
+  color: #ffffff;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* 타이틀 + 내용 */
+.hot-recruit-posts .content-title {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  color: #000000;
+  margin: 0;
+}
+
+.hot-recruit-posts .content-detail {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  color: #696965;
+  line-height: 20px;
+  margin: 0;
+}
+
+/* 작성자 + 태그 영역 */
+.hot-recruit-posts .information {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+/* 작성자 정보 */
+.hot-recruit-posts .label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-family: "Pretendard-Regular", Helvetica;
+  color: #c5c5c6;
+}
+
+.hot-recruit-posts .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #c5c5c6;
+}
+
+/* PartComponent는 아래에서 스타일링 */

@@ -31,6 +31,7 @@
 
 .login-input {
   width: 100%;
+  padding-left: 10px;
   height: 48px;
   background-color: white;
   border: 1px solid #989999;

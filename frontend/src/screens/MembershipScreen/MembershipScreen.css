@@ -14,20 +14,21 @@
 .membership-wrapper {
   background-color: white;
   width: 100%;
-  height: 1238px;
+  height: auto;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
 .membership-inner {
   position: relative;
   width: 100%;
-  height: 1238px;
+  height: auto;
 }
 
 .membership-background {
   position: absolute;
   width: 100%;
-  height: 1238px;
+  height: auto;
   top: 0;
   left: 0;
   background-color: white;

@@ -1,0 +1,54 @@
+.item {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  height: 24px;
+  padding: 0px 16px;
+  position: relative;
+  width: 282px;
+}
+
+.item .element {
+  color: #000000;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.item .frame-3 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.item .element-2 {
+  color: #696665;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.item .comment-count {
+  color: #ff0000;
+  font-family: "Pretendard-Light", Helvetica;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}

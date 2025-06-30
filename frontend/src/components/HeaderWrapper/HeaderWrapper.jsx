@@ -1,18 +1,25 @@
 // HeaderWrapper.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 import "./HeaderWrapper.css";
 
 export const HeaderWrapper = ({ className }) => {
+  const navigate = useNavigate();
+
   return (
     <div className={`header-wrapper ${className}`}>
       <div className="header-top">
         <div className="logo-section">
           <p className="logo-text">
-              <Link to="/" style={{ textDecoration: 'none' }}>
+              <button
+                onClick={() => navigate("/")}
+                style={{ all: "unset", cursor: "pointer" }}
+              >
                 <span className="logo-green">TEAM</span>
                 <span className="logo-yellow">O</span>
-              </Link>
+            </button>
           </p>
         </div>
         <img
@@ -24,11 +31,42 @@ export const HeaderWrapper = ({ className }) => {
 
       <div className="header-menu">
         <div className="nav-links">
-          <div className="nav-item">홈</div>
-          <div className="nav-item">대외활동</div>
-          <div className="nav-item">공모전</div>
-          <div className="nav-item">스터디</div>
-          <div className="nav-item">게시판</div>
+
+          <button
+            className="nav-item"
+            onClick={() => navigate("/")}
+            style={{ background: "none", border: "none", cursor: "pointer" }}
+          >
+            홈
+          </button>
+          <button
+            className="nav-item"
+            onClick={() => navigate("/")}
+            style={{ background: "none", border: "none", cursor: "pointer" }}
+          >
+            대외활동
+          </button>
+          <button
+            className="nav-item"
+            onClick={() => navigate("/")}
+            style={{ background: "none", border: "none", cursor: "pointer" }}
+          >
+            공모전
+          </button>
+          <button
+            className="nav-item"
+            onClick={() => navigate("/")}
+            style={{ background: "none", border: "none", cursor: "pointer" }}
+          >
+            스터디
+          </button>
+          <button
+            className="nav-item"
+            onClick={() => navigate("/")}
+            style={{ background: "none", border: "none", cursor: "pointer" }}
+          >
+            게시판
+          </button>
         </div>
 
         <div className="search-bar">
