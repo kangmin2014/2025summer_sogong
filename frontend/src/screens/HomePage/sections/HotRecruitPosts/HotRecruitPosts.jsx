@@ -2,7 +2,6 @@ import React from "react";
 import { BoxTitle } from "../../../../components/BoxTitle";
 import { HotRecruitPostsWrapper } from "../../../../components/HotRecruitPostsWrapper";
 import "./HotRecruitPosts.css";
-// import { HotRecruitPostsComponent } from "../../../../components/HotRecruitPostsComponent";
 
 export const HotRecruitPosts = () => {
   return (
@@ -12,10 +11,6 @@ export const HotRecruitPosts = () => {
         <HotRecruitPostsWrapper />
         <HotRecruitPostsWrapper />
         <HotRecruitPostsWrapper />
-
-        {/* <HotRecruitPostsComponent />
-        <HotRecruitPostsComponent />
-        <HotRecruitPostsComponent /> */}
       </div>
     </div>
   );

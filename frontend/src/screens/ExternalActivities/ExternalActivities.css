@@ -1,0 +1,40 @@
+/* ExternalActivitites.css */
+
+.external-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+}
+
+.external-container {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.external-content {
+  position: relative;
+  height: auto;
+  background-color: white;
+}
+
+.external-body {
+  display: flex;
+}
+
+.external-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-list-wrapper-container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+  /* margin-top: 40px; */
+  /* position: relative; */
+  padding-bottom: 80px;
+  padding-left: 60px;
+}

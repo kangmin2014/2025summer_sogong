@@ -8,23 +8,24 @@ import { Card, CardContent } from "../../../../../components/ui/card";
 import "./Login.css"; // 분리된 CSS 파일 불러오기
 
 export const Login = ({ onLogout, data }) => {
-  const [nickname, setNickname] = useState("닉네임");
+  const [nickname, setNickname] = useState("");
   const [profileimg, setProfileimg] = useState("https://c.animaapp.com/Wk1CLIAN/img/picture@2x.png");
-
 
   const getNickname = async () => {
     try {
       const loginID = localStorage.getItem("loginID");
+      console.warn("loginID:", loginID);
       if (!loginID) {
         console.warn("loginID not found in localStorage");
         return;
       }
 
-      const response = await fetch(`http://localhost:5000/api/user/${loginID}`, {
-        method: "GET",
+      const response = await fetch("http://localhost:5000/api/get_user_info", {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        body: JSON.stringify({ username:loginID }), // backend가 username으로 받음
       });
 
       if (!response.ok) {
@@ -32,22 +33,23 @@ export const Login = ({ onLogout, data }) => {
         return;
       }
 
-      const userData = await response.json();
+      const data = await response.json();
 
-      if (!userData || !userData.nickname) {
+      if (!data || !data.user || !data.user.nickname) {
         console.warn("No nickname found in response");
         return;
       }
 
-      setNickname(userData.nickname);
-      if (userData.profileimg) {
-        setProfileimg(userData.profileimg);
-      }
+      setNickname(data.user.nickname);
+
+      // 프로필 이미지가 있다면 아래 코드 활성화
+      // if (data.user.profileimg) {
+      //   setProfileimg(data.user.profileimg);
+      // }
     } catch (error) {
       console.error("Error fetching nickname:", error);
     }
   };
-
 
   useEffect(() => {
     getNickname();
@@ -71,15 +73,12 @@ export const Login = ({ onLogout, data }) => {
         <div className="login-top-box">
           <div className="login-profile">
             <Avatar className="avatar">
-              <AvatarImage
-                src={profileimg}
-                className="avatar-img"
-              />
+              <AvatarImage src={profileimg} className="avatar-img" />
               <AvatarFallback>Profile</AvatarFallback>
             </Avatar>
 
             <div className="login-user-info">
-              <div className="nickname">{nickname}</div>
+              <div className="nickname">{nickname || "닉네임 없음"}</div>
               <Button variant="link" className="profile-detail-btn">
                 프로필 상세 정보
                 <img

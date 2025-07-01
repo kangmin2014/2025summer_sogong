@@ -1,6 +1,8 @@
 // Membership.jsx
 import React, { useState } from "react";
 import "./Membership.css";
+import { useNavigate } from "react-router-dom";
+
 
 export const Membership = () => {
   const [form, setForm] = useState({
@@ -9,7 +11,7 @@ export const Membership = () => {
     passwordConfirm: "",
     nickname: "",
   });
-
+const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
@@ -30,6 +32,7 @@ export const Membership = () => {
       return;
     }
 
+
     try {
       const response = await fetch("http://localhost:5000/api/register", {
         method: "POST",
@@ -41,7 +44,9 @@ export const Membership = () => {
 
       if (data.success) {
         alert("✅ 회원가입 완료!");
+        navigate("/login");
         setForm({ username: "", password: "", passwordConfirm: "", nickname: "" });
+      
       } else {
         alert("❌ 회원가입 실패: " + data.message);
       }

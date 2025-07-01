@@ -41,7 +41,7 @@ export const HeaderWrapper = ({ className }) => {
           </button>
           <button
             className="nav-item"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/ExternalActivities")}
             style={{ background: "none", border: "none", cursor: "pointer" }}
           >
             대외활동
