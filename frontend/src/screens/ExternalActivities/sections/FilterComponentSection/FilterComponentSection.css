@@ -20,10 +20,14 @@
   gap: 18px;
   padding-top: 4px;
   background: transparent;
+  cursor: pointer;  
+  border: none;
+  
+  height: 104px;
 }
 
 .search-icon {
-  width: 100%;
+  width: 24px;
   height: 24px;
 }
 

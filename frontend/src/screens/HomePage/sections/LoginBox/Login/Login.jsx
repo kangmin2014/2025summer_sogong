@@ -5,9 +5,17 @@ import { Avatar, AvatarFallback, AvatarImage } from "../../../../../components/u
 import { Badge } from "../../../../../components/ui/badge";
 import { Button } from "../../../../../components/ui/button";
 import { Card, CardContent } from "../../../../../components/ui/card";
+import { useNavigate } from "react-router-dom";
+
 import "./Login.css"; // 분리된 CSS 파일 불러오기
 
 export const Login = ({ onLogout, data }) => {
+  const navigate = useNavigate();
+
+  const goToMyPage = () => {
+    navigate("/MyPage");
+  };
+
   const [nickname, setNickname] = useState("");
   const [profileimg, setProfileimg] = useState("https://c.animaapp.com/Wk1CLIAN/img/picture@2x.png");
 
@@ -79,7 +87,7 @@ export const Login = ({ onLogout, data }) => {
 
             <div className="login-user-info">
               <div className="nickname">{nickname || "닉네임 없음"}</div>
-              <Button variant="link" className="profile-detail-btn">
+              <Button variant="link" className="profile-detail-btn" onClick={goToMyPage}>
                 프로필 상세 정보
                 <img
                   src="https://c.animaapp.com/Wk1CLIAN/img/arrow.svg"
@@ -87,6 +95,7 @@ export const Login = ({ onLogout, data }) => {
                   className="arrow-icon"
                 />
               </Button>
+
             </div>
           </div>
 

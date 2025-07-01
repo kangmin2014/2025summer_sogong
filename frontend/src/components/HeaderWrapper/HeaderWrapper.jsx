@@ -1,8 +1,5 @@
-// HeaderWrapper.jsx
 import React from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
 import "./HeaderWrapper.css";
 
 export const HeaderWrapper = ({ className }) => {
@@ -13,67 +10,44 @@ export const HeaderWrapper = ({ className }) => {
       <div className="header-top">
         <div className="logo-section">
           <p className="logo-text">
-              <button
-                onClick={() => navigate("/")}
-                style={{ all: "unset", cursor: "pointer" }}
-              >
-                <span className="logo-green">TEAM</span>
-                <span className="logo-yellow">O</span>
+            <button
+              onClick={() => navigate("/")}
+              style={{ all: "unset", cursor: "pointer" }}
+            >
+              <span className="logo-green">TEAM</span>
+              <span className="logo-yellow">O</span>
             </button>
           </p>
         </div>
-        <img
-          className="profile-button"
-          alt="Button"
-          src="https://c.animaapp.com/vPMKbFT7/img/button-1.svg"
-        />
+
+        <div className="profile-container">
+          {/* ✅ 겹쳐지는 24px 버튼 */}
+          <button
+            className="mypage-overlay-button"
+            onClick={() => navigate("/MyPage")}
+          />
+          <img
+            className="profile-button"
+            alt="Profile"
+            src="https://c.animaapp.com/vPMKbFT7/img/button-1.svg"
+          />
+        </div>
       </div>
 
       <div className="header-menu">
         <div className="nav-links">
-
-          <button
-            className="nav-item"
-            onClick={() => navigate("/")}
-            style={{ background: "none", border: "none", cursor: "pointer" }}
-          >
-            홈
-          </button>
-          <button
-            className="nav-item"
-            onClick={() => navigate("/ExternalActivities")}
-            style={{ background: "none", border: "none", cursor: "pointer" }}
-          >
-            대외활동
-          </button>
-          <button
-            className="nav-item"
-            onClick={() => navigate("/")}
-            style={{ background: "none", border: "none", cursor: "pointer" }}
-          >
-            공모전
-          </button>
-          <button
-            className="nav-item"
-            onClick={() => navigate("/")}
-            style={{ background: "none", border: "none", cursor: "pointer" }}
-          >
-            스터디
-          </button>
-          <button
-            className="nav-item"
-            onClick={() => navigate("/")}
-            style={{ background: "none", border: "none", cursor: "pointer" }}
-          >
-            게시판
-          </button>
+          <button className="nav-item" onClick={() => navigate("/")}>홈</button>
+          <button className="nav-item" onClick={() => navigate("/ExternalActivities")}>대외활동</button>
+          <button className="nav-item" onClick={() => navigate("/")}>공모전</button>
+          <button className="nav-item" onClick={() => navigate("/")}>스터디</button>
+          <button className="nav-item" onClick={() => navigate("/")}>게시판</button>
         </div>
 
         <div className="search-bar">
           <div className="search-placeholder">검색어를 입력해주세요...</div>
           <img
             className="search-icon"
-            alt="Search button"
+            alt="Search"
             src="https://c.animaapp.com/vPMKbFT7/img/search-button-1.svg"
           />
         </div>

@@ -1,7 +1,7 @@
 // FilterSection.jsx
 
 import React, { useState } from "react";
-import { Checkbox } from "../../../../components/ui/checkbox";
+import { Checkbox } from "../../../../components/ui/mycheckbox";
 import { Separator } from "../../../../components/ui/separator";
 import "./FilterSection.css";
 

@@ -67,6 +67,10 @@
   font-weight: bold;
   font-size: 1.5rem;
   color: black;
+  border: none;           /* ✅ 테두리 제거 */
+  background: none;       /* ✅ 배경 제거 (선택) */
+  outline: none;          /* ✅ 포커스시 생기는 외곽선 제거 (선택) */
+  cursor: pointer;
 }
 
 .search-bar {
@@ -91,4 +95,26 @@
 .search-icon {
   width: 20px;
   height: 20px;
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-button {
+  flex-shrink: 0;
+}
+
+/* ✅ profile-button 위에 겹쳐지는 투명 버튼 */
+.mypage-overlay-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
 }

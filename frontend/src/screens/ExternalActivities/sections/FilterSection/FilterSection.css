@@ -78,10 +78,10 @@
   height: 16px;
 }
 
-.filter-checkbox.unchecked {
+/* .filter-checkbox.unchecked {
   background-color: white;
   border: 0.5px solid #cccccc;
-}
+} */
 
 .filter-label {
   display: inline-flex;
