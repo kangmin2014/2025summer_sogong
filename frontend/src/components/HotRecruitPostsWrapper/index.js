@@ -1,0 +1,1 @@
+export { HotRecruitPostsWrapper } from "./HotRecruitPostsWrapper";

@@ -1,0 +1,220 @@
+/* HotRecruitPostsWrapper.css */
+
+.hot-recruit-posts-wrapper {
+  align-items: flex-start;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #e8e8e8;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px #00000040;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 212px;
+  justify-content: center;
+  position: relative;
+  width: 282px;
+}
+
+.hot-recruit-posts-wrapper .content-2 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0px 0px 0px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.hot-recruit-posts-wrapper .dday-component {
+  align-items: center;
+  background-color: #e86360;
+  border-radius: 48px;
+  display: flex;
+  gap: 10px;
+  height: 28px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  width: 60px;
+}
+
+.hot-recruit-posts-wrapper .text-wrapper-7 {
+  color: #ffffff;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.50px;
+  margin-top: -6.50px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.hot-recruit-posts-wrapper .p {
+  align-self: stretch;
+  color: #000000;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+}
+
+.hot-recruit-posts-wrapper .content-detail-2 {
+  align-self: stretch;
+  color: #696665;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 22px;
+  position: relative;
+}
+
+.hot-recruit-posts-wrapper .information {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0px 0px 0px 16px;
+  position: relative;
+  width: 151px;
+}
+
+.hot-recruit-posts-wrapper .label-2 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.hot-recruit-posts-wrapper .text-wrapper-8 {
+  color: #c5c5c6;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.hot-recruit-posts-wrapper .dot-2 {
+  color: #c5c5c6;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.70px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: 16px;
+}
+
+.hot-recruit-posts-wrapper .part-component {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.hot-recruit-posts-wrapper .PM-tag {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px #00000040;
+  display: flex;
+  gap: 10px;
+  height: 24px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  width: 40px;
+}
+
+.hot-recruit-posts-wrapper .detail {
+  color: #00c72b;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.00px;
+  margin-left: -4.00px;
+  margin-right: -4.00px;
+  margin-top: -6.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.hot-recruit-posts-wrapper .marketing-tag {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px #00000040;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  height: 24px;
+  justify-content: center;
+  padding: 10px 8px;
+  position: relative;
+}
+
+.hot-recruit-posts-wrapper .detail-2 {
+  color: #ff8c00;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.00px;
+  margin-top: -6.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.hot-recruit-posts-wrapper .startup-tag {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px #00000040;
+  display: flex;
+  gap: 10px;
+  height: 24px;
+  justify-content: center;
+  margin-right: -16.00px;
+  padding: 10px;
+  position: relative;
+  width: 40px;
+}
+
+.hot-recruit-posts-wrapper .detail-3 {
+  color: #f0bc00;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.00px;
+  margin-left: -4.00px;
+  margin-right: -4.00px;
+  margin-top: -6.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}

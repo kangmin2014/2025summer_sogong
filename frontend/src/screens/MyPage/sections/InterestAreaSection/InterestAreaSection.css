@@ -1,0 +1,67 @@
+.interest-section {
+  display: flex;
+  flex-direction: column;
+  width: 384px; /* w-96 */
+  align-items: flex-start;
+  position: absolute;
+  /* top: 570px;
+  left: 120px; */
+  padding: 0 0 24px 0;
+}
+
+.interest-header {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  padding: 24px 0 12px 0;
+  width: 100%;
+}
+
+.interest-title {
+  width: 104px;
+  height: 32px;
+  font-family: "Pretendard-SemiBold", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: black;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+.interest-tags {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.interest-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 8px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 2px #00000040;
+}
+
+.interest-label {
+  font-family: "Pretendard-Regular", Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Color variants */
+.interest-label.green {
+  color: #00c72b;
+}
+
+.interest-label.pink {
+  color: #ff48e6;
+}
+
+.interest-label.orange {
+  color: #ff8c00;
+}

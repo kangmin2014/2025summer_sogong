@@ -1,0 +1,46 @@
+.box-title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 880px;
+}
+
+.box-title .text-wrapper-3 {
+  color: #000000;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.box-title .more-button-2 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+}
+
+.box-title .text {
+  color: #000000;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.box-title .img {
+  height: 8px;
+  position: relative;
+  width: 5px;
+}
