@@ -1,0 +1,98 @@
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  width: 384px;
+  position: absolute;
+  /* top: 570px;
+  left: 528px; */
+  border: none;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px 0 10px 0;
+  padding-right: 201px;
+  width: 100%;
+}
+
+.skill-title {
+  font-family: 'Pretendard-SemiBold', Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: black;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+.skill-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 0 158px 0;
+  width: 100%;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.skill-gap-1 {
+  gap: 28px;
+}
+
+.skill-gap-2 {
+  gap: 50px;
+}
+
+.skill-gap-3 {
+  gap: 11px;
+}
+
+.skill-width-1 {
+  width: 102px;
+}
+
+.skill-width-2 {
+  width: 74px;
+}
+
+.skill-width-3 {
+  width: 52px;
+}
+
+.skill-width-4 {
+  width: 91px;
+}
+
+.skill-name {
+  width: 102px;
+  font-family: 'Pretendard-Medium', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+  margin-top: -1px;
+}
+
+.skill-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+}
+
+.star-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.skill-score {
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 11px;
+  color: #b1b1b1;
+  white-space: nowrap;
+}

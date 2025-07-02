@@ -1,0 +1,1 @@
+export { PartComponent } from "./PartComponent";

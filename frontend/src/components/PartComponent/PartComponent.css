@@ -1,0 +1,122 @@
+/* PartComponent.css */
+
+.part-component {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  position: relative;
+}
+
+.part-component .detail-wrapper {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px #00000040;
+  display: flex;
+  gap: 10px;
+  height: 24px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  width: 40px;
+}
+
+.part-component .detail {
+  color: #00c72b;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.00px;
+  margin-left: -4.00px;
+  margin-right: -4.00px;
+  margin-top: -6.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.part-component .div-wrapper {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px #00000040;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  height: 24px;
+  justify-content: center;
+  padding: 10px 8px;
+  position: relative;
+}
+
+.part-component .text-wrapper {
+  color: #ff484b;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.00px;
+  margin-top: -6.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.part-component .div {
+  color: #0094ff;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.00px;
+  margin-top: -6.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.part-component .detail-2 {
+  color: #ff48e6;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.00px;
+  margin-top: -6.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.part-component .detail-3 {
+  color: #ff8c00;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.00px;
+  margin-top: -6.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.part-component .detail-4 {
+  color: #b37eff;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.00px;
+  margin-top: -6.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}

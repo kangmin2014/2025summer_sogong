@@ -1,0 +1,68 @@
+/* Membership.css */
+
+.membership-container {
+  display: flex;
+  flex-direction: column;
+  width: 486px;
+  align-items: center;
+  gap: 48px; /* gap-12 */
+  position: absolute;
+  top: 381px;
+  /* left: 477px; */
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.membership-form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px; /* gap-9 */
+  width: 100%;
+}
+
+.membership-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* gap-2 */
+  width: 100%;
+}
+
+.membership-label {
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: black;
+}
+
+.membership-input {
+  width: 100%;
+  height: 48px;
+  background-color: white;
+  border: 1px solid #989999;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+.membership-button-wrapper {
+  display: flex;
+  width: 384px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: black;
+  border: 1px solid #989999;
+  border-radius: 8px;
+}
+
+.membership-button {
+  all: unset;
+  font-family: 'Pretendard-Medium', Helvetica, sans-serif;
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500;
+  color: white;
+  white-space: nowrap;
+  cursor: pointer;
+}

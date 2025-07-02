@@ -1,0 +1,30 @@
+.popularprogram {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 0px;
+  position: absolute;
+  top: 756px;
+  width: 894px;
+}
+
+.popularprogram .box-title-instance {
+  flex: 0 0 auto !important;
+}
+
+.popularprogram .box-list {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.popularprogram .popularprogram-box-instance {
+  color: #ff0000 !important;
+  font-family: "Pretendard-SemiBold", Helvetica !important;
+  font-weight: 600 !important;
+}

@@ -1,0 +1,68 @@
+.project-achievements-card {
+  display: flex;
+  flex-direction: column;
+  width: 384px; /* w-96 */
+  position: absolute;
+  /* top: 294px;
+  left: 936px; */
+  border: none;
+  box-shadow: none;
+}
+
+.project-achievements-content {
+  padding: 0;
+  width: 100%;
+}
+
+.project-achievements-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px 0;
+  padding-right: 232px;
+  width: 100%;
+}
+
+.project-achievements-title {
+  font-family: 'Pretendard-SemiBold', Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: black;
+  white-space: nowrap;
+  margin-top: -1px;
+}
+
+.project-achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 14px;
+  width: 100%;
+}
+
+.achievement-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.achievement-date {
+  width: fit-content;
+  white-space: nowrap;
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin-top: -1px;
+}
+
+.achievement-description {
+  width: 315px;
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin-top: -1px;
+}
