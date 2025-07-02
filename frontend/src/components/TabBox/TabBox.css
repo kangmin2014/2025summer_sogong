@@ -1,0 +1,33 @@
+.tab-box {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  height: 36px;
+  padding: 0px 0px 0px 16px;
+  position: relative;
+  width: 282px;
+}
+
+.tab-box .tab {
+  color: #37d429;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.tab-box .tab-2 {
+  color: #a3a3a3;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}

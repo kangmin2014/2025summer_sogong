@@ -1,0 +1,1 @@
+export { InterestAreaSection } from "./InterestAreaSection";

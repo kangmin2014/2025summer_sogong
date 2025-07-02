@@ -1,0 +1,103 @@
+.popularprogram-box {
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px #00000040;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 282px;
+}
+
+.popularprogram-box .image {
+  align-self: stretch;
+  height: 282px;
+  position: relative;
+  width: 100%;
+}
+
+.popularprogram-box .content {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #e5e7eb;
+  border-radius: 0px 0px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 72px;
+  justify-content: center;
+  padding: 0px 0px 0px 8px;
+  position: relative;
+  width: 100%;
+}
+
+.popularprogram-box .content-title {
+  align-self: stretch;
+  color: #000000;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+}
+
+.popularprogram-box .content-detail {
+  align-self: stretch;
+  color: #000000;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+}
+
+.popularprogram-box .label {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.popularprogram-box .date {
+  color: #9ca3af;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.popularprogram-box .dot {
+  color: #9ca3af;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: 11px;
+}
+
+.popularprogram-box .text-wrapper-4 {
+  color: #9ca3af;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}

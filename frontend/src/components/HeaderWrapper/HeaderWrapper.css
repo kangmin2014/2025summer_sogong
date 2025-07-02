@@ -1,0 +1,120 @@
+/* HeaderWrapper.css */
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  align-items: flex-start;
+  position: relative;
+  overflow-y: visible;
+}
+
+.header-top {
+  display: flex;
+  height: 116px;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 56px 120px 16px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #a3a3a3; /* border-neutral-400 */
+}
+
+.logo-section {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 48px;
+}
+
+.logo-text {
+  font-family: 'Coiny', Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.logo-green {
+  color: #37d429;
+}
+
+.logo-yellow {
+  color: #ffd400;
+}
+
+.profile-button {
+  flex-shrink: 0;
+}
+
+.header-menu {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  gap: 78px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.nav-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.nav-item {
+  font-family: 'Pretendard-Bold', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: black;
+  border: none;           /* ✅ 테두리 제거 */
+  background: none;       /* ✅ 배경 제거 (선택) */
+  outline: none;          /* ✅ 포커스시 생기는 외곽선 제거 (선택) */
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  width: 486px;
+  height: 56px;
+  align-items: center;
+  gap: 263px;
+  padding: 8px 0 8px 24px;
+  background-color: #f3f4f6; /* gray-100 */
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 50px;
+}
+
+.search-placeholder {
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #9ca3af; /* gray-400 */
+  white-space: nowrap;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-button {
+  flex-shrink: 0;
+}
+
+/* ✅ profile-button 위에 겹쳐지는 투명 버튼 */
+.mypage-overlay-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}

@@ -1,0 +1,56 @@
+.mypagesect-header {
+  display: flex;
+  /* width: 1200px; */
+  width: 100.4%;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 196px;
+  left: 120px;
+  border-bottom: 1px solid #b1b1b1;
+}
+
+.mypage-title-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 38px;
+  padding-bottom: 22px;
+}
+
+.mypage-title {
+  font-family: 'Pretendard-Bold', Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: black;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.mypage-edit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding-top: 69px;
+  padding-bottom: 12px;
+  padding-left: 0;
+  padding-right: 0;
+  height: auto;
+
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.mypage-edit-text {
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  line-height: normal;
+}
+
+.mypage-edit-arrow {
+  width: 5px;
+  height: 8px;
+}

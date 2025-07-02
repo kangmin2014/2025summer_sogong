@@ -1,0 +1,65 @@
+.activity-summary-card {
+  display: flex;
+  flex-direction: column;
+  width: 384px; /* 96 * 4 */
+  align-items: flex-start;
+  position: absolute;
+  /* top: 294px;
+  left: 528px; */
+  border: none;
+  box-shadow: none;
+}
+
+.activity-summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1.5rem 0;
+  padding-right: 225px;
+  width: 100%;
+}
+
+.activity-summary-title {
+  font-family: 'Pretendard-SemiBold', Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+.activity-summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0.875rem;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.activity-summary-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.activity-period {
+  width: 7rem; /* 112px */
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin-top: -1px;
+}
+
+.activity-description {
+  white-space: nowrap;
+  font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin-top: -1px;
+}

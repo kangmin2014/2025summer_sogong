@@ -1,0 +1,1 @@
+export { MyPageEdit } from "./MyPageEdit";

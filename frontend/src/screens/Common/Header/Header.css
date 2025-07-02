@@ -1,0 +1,10 @@
+/* Header.css */
+
+.custom-header {
+  width: 100%;
+  flex-wrap: nowrap !important;
+  position: absolute !important;
+  left: 0 !important;
+  background-color: transparent !important;
+  top: 0 !important;
+}

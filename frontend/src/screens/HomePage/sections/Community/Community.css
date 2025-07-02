@@ -1,0 +1,109 @@
+.community {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 918px;
+  position: absolute;
+  top: 456px;
+  width: 282px;
+}
+
+.community .community-title {
+  align-self: stretch;
+  color: #000000;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.community .community-index {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #e8e8e8;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px #00000040;
+  display: flex;
+  flex-direction: column;
+  height: 374px;
+  padding: 8px 0px 0px;
+  position: relative;
+  width: 100%;
+}
+
+.community .community-box-instance {
+  align-self: stretch !important;
+  display: flex !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+}
+
+.community .design-component-instance-node {
+  height: 1px !important;
+  top: 38px !important;
+}
+
+.community .community-box-2 {
+  top: 38px !important;
+}
+
+.community .design-component-instance-node-2 {
+  align-self: stretch !important;
+  width: 100% !important;
+}
+
+.community .list-box {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.community .frame {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 190px 0px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.community .more-button {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+  width: 74px;
+}
+
+.community .index {
+  color: #696665;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.community .arrow {
+  height: 8px;
+  position: relative;
+  width: 5px;
+}
