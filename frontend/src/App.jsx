@@ -1,5 +1,6 @@
 // App.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { MyPageEdit } from "./screens/MyPageEdit";
 import { MyPage } from "./screens/MyPage";
 import { LogIn } from "./screens/LogIn";
 import { MembershipScreen } from "./screens/MembershipScreen";
@@ -10,6 +11,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path='/MyPageEdit' element={<MyPageEdit />} /> 
         <Route path='/MyPage' element={<MyPage />} />
         <Route path='/ExternalActivities' element={<ExternalActivities />} />
         <Route path="/login" element={<LogIn />} />

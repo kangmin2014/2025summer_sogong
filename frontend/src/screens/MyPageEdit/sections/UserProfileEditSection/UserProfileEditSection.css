@@ -1,0 +1,142 @@
+/* UserProfileEditSection.css */
+
+.user-profile-card {
+  display: flex;
+  flex-direction: column;
+  width: 384px;
+  position: absolute;
+  border: none;
+  box-shadow: none;
+}
+
+.user-profile-content {
+  padding: 0;
+  width: 100%;
+}
+
+.user-profile-top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.user-info-box {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  gap: 8px;
+}
+
+.user-nickname {
+  font-family: 'Pretendard-SemiBold', Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  margin-top: -1px;
+}
+
+.user-id-box {
+  margin-top: 5px;
+  display: flex;
+  width: 100%;
+}
+
+.user-id-at {
+  font-family: 'Pretendard-Medium', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #696665;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+.user-id-text {
+  font-family: 'Pretendard-Medium', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #696665;
+  margin-top: -1px;
+  text-decoration: underline;
+  width: 155px;
+}
+
+.user-stats {
+  display: flex;
+  gap: 32px;
+  padding-bottom: 24px;
+  width: 100%;
+}
+
+.stat-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-icon {
+  width: 23px;
+  height: 23px;
+}
+
+.stat-label,
+.stat-value {
+  font-family: 'Pretendard-Medium', Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+.user-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 150px;
+  object-fit: cover;
+}
+
+.user-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 150px;
+  border: 1px solid #696665;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.nickname-input {
+  font-family: 'Pretendard-SemiBold', Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  width: 80%;
+  outline: none;
+}
+
+.nickname-input::placeholder {
+  font-size: 14.5px;
+  color: #ccc;
+}
+
+.nickname-input.error::placeholder {
+  /* color: #ff5a5a; */
+}
+
+.nickname-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.edit-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+}

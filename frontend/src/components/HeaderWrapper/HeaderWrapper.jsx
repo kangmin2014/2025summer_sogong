@@ -24,7 +24,14 @@ export const HeaderWrapper = ({ className }) => {
           {/* ✅ 겹쳐지는 24px 버튼 */}
           <button
             className="mypage-overlay-button"
-            onClick={() => navigate("/MyPage")}
+            onClick={() => {
+              const isLoggedIn = localStorage.getItem("isLoggedIn");
+              if (isLoggedIn === "true") {
+                navigate("/MyPage");
+              } else {
+                navigate("/Login");
+              }
+            }}
           />
           <img
             className="profile-button"

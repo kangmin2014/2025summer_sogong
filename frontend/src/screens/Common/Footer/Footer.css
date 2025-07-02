@@ -12,7 +12,7 @@
   background-color: #f8f8f8;
   border-top: 1px solid black;
   white-space: nowrap;
-  overflow: hidden;
+  overflow:auto;
 }
 
 .footer-content {

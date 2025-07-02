@@ -46,7 +46,7 @@ export const MyPage = () => {
           <AvailableToolsSection />
           <div className="tool-select">
             <select className="custom-select">
-              <option value="planning">기획</option>
+              <option value="pm">기획</option>
               <option value="frontend">프론트엔드</option>
               <option value="backend">백엔드</option>
               <option value="design">디자인</option>
