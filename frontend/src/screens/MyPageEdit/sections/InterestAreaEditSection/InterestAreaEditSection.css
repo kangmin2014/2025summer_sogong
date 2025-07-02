@@ -1,67 +1,121 @@
-.interest-section {
+/* InterestAreaEditSection.css */
+
+.interest-edit-section {
   display: flex;
   flex-direction: column;
-  width: 384px; /* w-96 */
+  width: 384px;
   align-items: flex-start;
   position: absolute;
-  /* top: 570px;
-  left: 120px; */
   padding: 0 0 24px 0;
 }
 
-.interest-header {
+.interest-edit-header {
   display: flex;
   align-items: center;
-  justify-content: left;
-  gap: 10px;
+  justify-content: space-between;
   padding: 24px 0 12px 0;
   width: 100%;
 }
 
-.interest-title {
-  width: 104px;
-  height: 32px;
+.interest-edit-title {
   font-family: "Pretendard-SemiBold", Helvetica, sans-serif;
   font-weight: 600;
   font-size: 28px;
   color: black;
-  margin-top: -1px;
   white-space: nowrap;
 }
 
-.interest-tags {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
+.tag-plus-button {
+  font-size: 14px;
+  font-family: "Pretendard-Regular", Helvetica;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  color: black;
+  border-radius: 4px;
+  transition: background 0.2s;
 }
 
-.interest-tag {
+.tag-plus-button:hover {
+  background-color: #f0f0f0;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.tag-item {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 4px 8px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 2px 2px #00000040;
+  padding: 4px 8px;
+  gap: 6px;
 }
 
-.interest-label {
+.tag-label {
   font-family: "Pretendard-Regular", Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 400;
   white-space: nowrap;
 }
 
-/* Color variants */
-.interest-label.green {
+/* Color classes */
+.tag-label.green {
   color: #00c72b;
 }
-
-.interest-label.pink {
+.tag-label.red {
+  color: #ff484b;
+}
+.tag-label.blue {
+  color: #0094ff;
+}
+.tag-label.pink {
   color: #ff48e6;
 }
-
-.interest-label.orange {
+.tag-label.orange {
   color: #ff8c00;
+}
+.tag-label.yellow {
+  color: #f0bc00;
+}
+
+.tag-delete-icon {
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+}
+
+.tag-add-container {
+  position: relative;
+}
+
+.tag-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  padding: 8px 0;
+  min-width: 120px;
+}
+
+.tag-dropdown-item {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-family: "Pretendard-Regular", Helvetica;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tag-dropdown-item:hover {
+  background-color: #f5f5f5;
 }
