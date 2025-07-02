@@ -1,64 +1,54 @@
 // FilterSection.jsx
 
-import React, { useState } from "react";
+import React from "react";
 import { Checkbox } from "../../../../components/ui/mycheckbox";
 import { Separator } from "../../../../components/ui/separator";
 import "./FilterSection.css";
 
-export const FilterSection = () => {
+export const FilterSection = ({ filters, setFilters }) => {
   const filterCategories = [
     {
       title: "활동 유형",
-      options: [
-        { label: "개인 활동", count: 123, defaultChecked: false },
-        { label: "팀 활동", count: 123, defaultChecked: false },
-      ],
+      field: "activity_type",
+      options: ["개인 활동", "팀 활동"],
     },
     {
       title: "주최 기관",
-      options: [
-        { label: "대기업", count: 123, defaultChecked: false },
-        { label: "중소기업", count: 123, defaultChecked: false },
-        { label: "스타트업", count: 123, defaultChecked: false },
-        { label: "공공기관/공기업", count: 123, defaultChecked: false },
-        { label: "비영리단체/협회", count: 123, defaultChecked: false },
-      ],
+      field: "institution_tags",
+      options: ["대기업", "중소기업", "스타트업", "공공기관/공기업", "비영리단체/협회"],
     },
     {
       title: "모임 형태",
-      options: [
-        { label: "온라인", count: 123, defaultChecked: false },
-        { label: "오프라인", count: 123, defaultChecked: false },
-      ],
+      field: "recruit_tags",
+      options: ["온라인", "오프라인"],
     },
     {
       title: "신뢰도 태그",
-      options: [
-        { label: "보상/혜택", count: 123, defaultChecked: false },
-        { label: "스펙/이력서", count: 123, defaultChecked: false },
-        { label: "효율/가성비", count: 123, defaultChecked: false },
-        { label: "리스크 회피", count: 123, defaultChecked: false },
-        { label: "투명성 검증", count: 123, defaultChecked: false },
-      ],
+      field: "trust_tags",
+      options: ["보상/혜택", "스펙/이력서", "효율/가성비", "리스크 회피", "투명성 검증"],
     },
   ];
 
-  const [checkedOptions, setCheckedOptions] = useState(() => {
-    const initialState = {};
-    filterCategories.forEach((category) => {
-      category.options.forEach((option) => {
-        initialState[`${category.title}-${option.label}`] =
-          option.defaultChecked;
-      });
-    });
-    return initialState;
-  });
+  // 체크박스 체크 상태 변경 핸들러
+  const handleCheckboxChange = (field, optionLabel, checked) => {
+    const current = new Set(filters[field] || []);
 
-  const handleCheckboxChange = (categoryTitle, optionLabel, checked) => {
-    setCheckedOptions((prev) => ({
-      ...prev,
-      [`${categoryTitle}-${optionLabel}`]: checked,
-    }));
+    let valueToAdd = optionLabel;
+    if (field === "activity_type") {
+      if (optionLabel === "개인 활동") valueToAdd = "개인";
+      else if (optionLabel === "팀 활동") valueToAdd = "팀";
+    }
+
+    if (checked) {
+      current.add(valueToAdd);
+    } else {
+      current.delete(valueToAdd);
+    }
+
+    setFilters({
+      ...filters,
+      [field]: Array.from(current),
+    });
   };
 
   return (
@@ -72,7 +62,7 @@ export const FilterSection = () => {
 
       {filterCategories.map((category, categoryIndex) => (
         <div
-          key={`category-${categoryIndex}`}
+          key={category.field}
           className={`filter-category ${
             categoryIndex === filterCategories.length - 1
               ? "filter-category-last"
@@ -83,24 +73,36 @@ export const FilterSection = () => {
             <h3>{category.title}</h3>
           </div>
 
-          {category.options.map((option, optionIndex) => (
-            <div key={`option-${categoryIndex}-${optionIndex}`} className="filter-option">
-              <Checkbox
-                id={`${category.title}-${option.label}`}
-                checked={checkedOptions[`${category.title}-${option.label}`]}
-                onCheckedChange={(checked) =>
-                  handleCheckboxChange(category.title, option.label, checked)
-                }
-                className={`filter-checkbox ${
-                  option.defaultChecked ? "" : "unchecked"
-                }`}
-              />
-              <label htmlFor={`${category.title}-${option.label}`} className="filter-label">
-                <span>{option.label}</span>
-                <span>({option.count})</span>
-              </label>
-            </div>
-          ))}
+          {category.options.map((optionLabel) => {
+            // 체크 여부 판단 (activity_type 옵션은 내부 값과 다름)
+            const isChecked =
+              category.field === "activity_type"
+                ? filters.activity_type?.includes(
+                    optionLabel === "개인 활동"
+                      ? "개인"
+                      : optionLabel === "팀 활동"
+                      ? "팀"
+                      : ""
+                  ) || false
+                : filters[category.field]?.includes(optionLabel) || false;
+
+            return (
+              <div key={optionLabel} className="filter-option">
+                <Checkbox
+                  id={`${category.field}-${optionLabel}`}
+                  checked={isChecked}
+                  onCheckedChange={(checked) =>
+                    handleCheckboxChange(category.field, optionLabel, checked)
+                  }
+                  className="filter-checkbox"
+                />
+                <label htmlFor={`${category.field}-${optionLabel}`} className="filter-label">
+                  <span>{optionLabel}</span>
+                  <span>(123)</span>
+                </label>
+              </div>
+            );
+          })}
 
           {categoryIndex < filterCategories.length - 1 && (
             <Separator style={{ height: "1px", backgroundColor: "#dfe5ed", width: "100%" }} />

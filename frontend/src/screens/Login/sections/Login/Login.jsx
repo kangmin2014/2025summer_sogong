@@ -23,6 +23,7 @@ export const Login = () => {
       if (data.success) {
         alert("✅ 로그인 성공!");
         localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("loginID",username);
         navigate("/")
         // 예: navigate("/dashboard"); 로 이동 가능
       } else {

@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "../../../../components/ui/button1";
 import "./SectionTitleSection.css";
 
-export const SectionTitleSection = () => {
-  const [selectedSort, setSelectedSort] = useState("인기순");
-
+export const SectionTitleSection = ({ sortBy, setSortBy }) => {
   const sortOptions = [
-    { id: "popular", label: "인기순" },
-    { id: "views", label: "조회순" },
+    { id: "view_count", label: "조회순" },
     { id: "rating", label: "높은평점순" },
-    { id: "reviews", label: "리뷰많은순" },
+    { id: "rating_count", label: "리뷰많은순" },
   ];
 
   const handleSortChange = (option) => {
-    setSelectedSort(option.label);
+    setSortBy(option.id);
   };
 
   return (
@@ -47,12 +44,12 @@ export const SectionTitleSection = () => {
                   variant="ghost"
                   size="sm"
                   className={`sort-button ${
-                    selectedSort === option.label
+                    sortBy === option.id
                       ? "sort-button-active"
                       : "sort-button-inactive"
                   }`}
                   onClick={() => handleSortChange(option)}
-                  aria-pressed={selectedSort === option.label}
+                  aria-pressed={sortBy === option.id}
                   role="button"
                 >
                   {option.label}
