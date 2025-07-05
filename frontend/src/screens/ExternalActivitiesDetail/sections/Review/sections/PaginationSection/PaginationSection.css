@@ -1,0 +1,87 @@
+/* PaginationSections.css */
+
+.detail-pagination-wrapper {
+  /* ❌ 제거: position: absolute; top, left */
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+  padding-top: 300px;
+  padding-bottom: 72px;
+  margin-top: 72px;
+}
+
+.detail-pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 982px;
+  width: 100%;
+}
+
+.detail-pagination-prev {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.detail-pagination-prev-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.detail-pagination-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  gap: 0;
+}
+
+.detail-pagination-item {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.detail-pagination-link {
+  width: 100%;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.detail-pagination-link-active {
+  color: #0094ff;
+}
+
+.detail-pagination-link-inactive {
+  color: #a5a5a5;
+}
+
+.detail-pagination-next {
+  width: 40px;
+  height: 40px;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+
+  padding: 0;
+}
+
+.detail-pagination-next-icon {
+  width: 10px;
+  height: 17px;
+}

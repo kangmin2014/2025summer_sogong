@@ -1,0 +1,187 @@
+.first-information {
+  position: relative;
+  background-image: url(./img/first-information-box.png);
+  background-size: cover;
+  background-position: 50% 6.4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 196px;
+}
+
+.first-information::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* 밝은 필터 */
+  z-index: 1;
+}
+
+.first-information > * {
+  position: relative;
+  z-index: 2;
+}
+
+.first-information .information-box {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 0px 0px 120px;
+  position: relative;
+  width: 936px;
+}
+
+.first-information .classification {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  opacity: 0.8;
+  padding: 24px 0px 8px;
+  position: relative;
+  width: 100%;
+}
+
+.first-information .div {
+  align-self: stretch;
+  color: #b1b1b1;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+}
+
+.first-information .basic-information {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 120px;
+  position: relative;
+  width: 100%;
+}
+
+.first-information .title {
+  align-self: stretch;
+  color: #ffffff;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.first-information .plus-information {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 123px;
+  position: relative;
+  width: 100%;
+}
+
+.first-information .div-2 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+
+.first-information .review-star {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.first-information .star {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.first-information .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.first-information .company-icon {
+  height: 19px;
+  position: relative;
+  width: 18px;
+}
+
+.first-information .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-decoration: underline;
+  width: fit-content;
+}
+
+.first-information .tag-information {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.first-information .hashtag-icon {
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+
+.first-information .tag-gather-instance {
+  flex: 0 0 auto !important;
+}
+
+.first-information .video-box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 324px;
+  justify-content: center;
+  padding: 0px 120px 0px 0px;
+  position: relative;
+  width: 504px;
+}
+
+.first-information .video {
+  align-self: stretch;
+  height: 216px;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}

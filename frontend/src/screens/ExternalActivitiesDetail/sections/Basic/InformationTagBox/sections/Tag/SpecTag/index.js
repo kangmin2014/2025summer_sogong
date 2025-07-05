@@ -1,0 +1,1 @@
+export { SpecTag } from "./SpecTag";

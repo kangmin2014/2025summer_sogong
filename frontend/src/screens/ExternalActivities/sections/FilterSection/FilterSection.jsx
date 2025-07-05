@@ -98,7 +98,6 @@ export const FilterSection = ({ filters, setFilters }) => {
                 />
                 <label htmlFor={`${category.field}-${optionLabel}`} className="filter-label">
                   <span>{optionLabel}</span>
-                  <span>(123)</span>
                 </label>
               </div>
             );

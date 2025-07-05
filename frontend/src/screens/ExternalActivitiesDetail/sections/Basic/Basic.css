@@ -1,0 +1,65 @@
+/* Basic.css */
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.title-2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 28px;
+}
+
+.text-7 {
+  color: #000000;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.overlap {
+  width: 100%;
+}
+
+.title-box-2 {
+  display: flex;
+  align-items: flex-start;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.text-6 {
+  color: #000000;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.detail-information {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  gap: 16px;
+  width: 100%;
+}
+
+.element {
+  color: #000000;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: pre-line;
+}

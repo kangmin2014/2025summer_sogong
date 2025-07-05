@@ -1,5 +1,3 @@
-// InterestAreaSection.jsx
-
 import React from "react";
 import "./InterestAreaSection.css";
 

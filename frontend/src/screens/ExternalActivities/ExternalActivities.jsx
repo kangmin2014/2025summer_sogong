@@ -1,5 +1,3 @@
-// ExternalActivities.jsx
-
 import React, { useState, useEffect } from "react";
 import { FilterComponentSection } from "./sections/FilterComponentSection/FilterComponentSection";
 import { FilterSection } from "./sections/FilterSection";
@@ -21,29 +19,45 @@ export const ExternalActivities = () => {
 
   const [sortBy, setSortBy] = useState("view_count");
   const [activities, setActivities] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalCount, setTotalCount] = useState(0);
+  const limit = 10;
 
+  // 필터나 정렬 변경 시 페이지 1로 초기화
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [JSON.stringify(filters), sortBy]);
+
+  // 필터/정렬/페이지 변경 시 데이터 요청
   useEffect(() => {
     const fetchActivities = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/filtered_activities", {
+        const res = await fetch("http://localhost:5000/api/filtered_activities", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ filters, sort_by: sortBy }),
+          body: JSON.stringify({ filters, sort_by: sortBy, page: currentPage, limit }),
         });
 
-        const data = await response.json();
+        const data = await res.json();
         if (data.success) {
           setActivities(data.activities);
+          setTotalCount(data.total_count);
         } else {
           console.error("활동 가져오기 실패:", data.message);
+          setActivities([]);
+          setTotalCount(0);
         }
-      } catch (error) {
-        console.error("네트워크 오류:", error);
+      } catch (e) {
+        console.error("네트워크 오류:", e);
+        setActivities([]);
+        setTotalCount(0);
       }
     };
 
     fetchActivities();
-  }, [filters, sortBy]);
+  }, [JSON.stringify(filters), sortBy, currentPage]);
+
+  const totalPages = Math.ceil(totalCount / limit);
 
   return (
     <div className="external-wrapper">
@@ -51,7 +65,11 @@ export const ExternalActivities = () => {
 
       <div className="external-content">
         <FilterComponentSection />
-        <SectionTitleSection sortBy={sortBy} setSortBy={setSortBy} />
+        <SectionTitleSection
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          totalCount={totalCount}
+        />
 
         <div className="external-body">
           <FilterSection filters={filters} setFilters={setFilters} />
@@ -60,7 +78,12 @@ export const ExternalActivities = () => {
             <div className="item-list-wrapper-container">
               <ItemListWrapperSection activities={activities} />
             </div>
-            <PaginationSection />
+
+            <PaginationSection
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+            />
           </div>
         </div>
       </div>
@@ -69,4 +92,3 @@ export const ExternalActivities = () => {
     </div>
   );
 };
-

@@ -1,0 +1,23 @@
+.HOT-tag {
+  align-items: center;
+  background-color: #ff0000;
+  border-radius: 4px;
+  display: inline-flex;
+  gap: 10px;
+  height: 24px;
+  justify-content: center;
+  padding: 4px 12px;
+  position: relative;
+}
+
+.HOT-tag .text {
+  color: #ffffff;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.50px;
+  position: relative;
+  width: fit-content;
+}

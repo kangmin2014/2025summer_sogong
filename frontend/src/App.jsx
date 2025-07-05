@@ -1,16 +1,19 @@
 // App.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { ExternalActivitiesDetail } from "./screens/ExternalActivitiesDetail";
 import { MyPageEdit } from "./screens/MyPageEdit";
 import { MyPage } from "./screens/MyPage";
 import { LogIn } from "./screens/LogIn";
 import { MembershipScreen } from "./screens/MembershipScreen";
-import { ExternalActivities } from "./screens/ExternalActivities/ExternalActivities";
+import { ExternalActivities } from "./screens/ExternalActivities";
 import { HomePage } from "./screens/HomePage";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path='/ExternalActivitiesDetail' element={<ExternalActivitiesDetail />} />
         <Route path='/MyPageEdit' element={<MyPageEdit />} /> 
         <Route path='/MyPage' element={<MyPage />} />
         <Route path='/ExternalActivities' element={<ExternalActivities />} />

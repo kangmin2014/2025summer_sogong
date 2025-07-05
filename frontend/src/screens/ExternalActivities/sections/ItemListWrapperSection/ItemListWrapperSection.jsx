@@ -1,10 +1,17 @@
 import React from "react";
 import { Button } from "../../../../components/ui/button1";
+import { useNavigate } from "react-router-dom";
 import "./ItemListWrapperSection.css";
 
 export const ItemListWrapperSection = ({ activities }) => {
+  const navigate = useNavigate(); // ✅ navigation 함수
+
   if (!activities || activities.length === 0) {
-    return <p className="no-results">결과가 없습니다.</p>;
+    return (
+      <div className="item-wrapper">
+        <p className="no-results">결과가 없습니다.</p>
+      </div>
+    );
   }
 
   return (
@@ -25,7 +32,13 @@ export const ItemListWrapperSection = ({ activities }) => {
           {/* 활동 내용 */}
           <div className="item-content">
             <div className="item-text-group">
-              <div className="item-title">{item.title}</div>
+              <div
+                className="item-title"
+                onClick={() => navigate("/ExternalActivitiesDetail")}
+              >
+                {item.title}
+              </div>
+
               <div className="item-subtitle">{item.company}</div>
               <div className="item-category">{item.institution_tags}</div>
 

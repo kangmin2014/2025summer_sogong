@@ -12,10 +12,10 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',        // 사용자 이름 (환경에 맞게 변경)
-  password: 'password',// 비밀번호 (환경에 맞게 변경)
+  password: '3412',// 비밀번호 (환경에 맞게 변경)
   database: 'teamo_db'    // 수정된 데이터베이스 이름
 });
-
+// DB 연결 성공했는지 알림
 db.connect(err => {
   if (err) {
     console.error('MySQL 연결 실패:', err);
@@ -173,17 +173,17 @@ app.patch('/api/update_user_info', (req, res) => {
 
 //필터에 따라서 대외활동 전달
 app.post('/api/filtered_activities', (req, res) => {
-  const { filters, sort_by } = req.body;
+  console.log('filtered_activities 라우터 호출됨');
+  const { filters, sort_by, page = 1, limit = 10 } = req.body;
+  const offset = (page - 1) * limit;
 
   const whereConditions = [];
 
-  // 활동 유형 (ENUM)
   if (filters.activity_type && filters.activity_type.length > 0) {
     const types = filters.activity_type.map(type => `'${type}'`).join(',');
     whereConditions.push(`activity_type IN (${types})`);
   }
 
-  // institution_tags (SET)
   if (filters.institution_tags && filters.institution_tags.length > 0) {
     const inst = filters.institution_tags
       .map(tag => `FIND_IN_SET('${tag}', institution_tags) > 0`)
@@ -191,7 +191,6 @@ app.post('/api/filtered_activities', (req, res) => {
     whereConditions.push(`(${inst})`);
   }
 
-  // recruit_tags (SET)
   if (filters.recruit_tags && filters.recruit_tags.length > 0) {
     const recruit = filters.recruit_tags
       .map(tag => `FIND_IN_SET('${tag}', recruit_tags) > 0`)
@@ -199,7 +198,6 @@ app.post('/api/filtered_activities', (req, res) => {
     whereConditions.push(`(${recruit})`);
   }
 
-  // trust_tags (SET)
   if (filters.trust_tags && filters.trust_tags.length > 0) {
     const trust = filters.trust_tags
       .map(tag => `FIND_IN_SET('${tag}', trust_tags) > 0`)
@@ -209,38 +207,59 @@ app.post('/api/filtered_activities', (req, res) => {
 
   const whereClause = whereConditions.length > 0 ? 'WHERE ' + whereConditions.join(' AND ') : '';
   const validSorts = ['view_count', 'rating', 'rating_count'];
-  const orderBy = validSorts.includes(sort_by) ? `ORDER BY ${sort_by} DESC` : '';
-const sql = `
-    SELECT 
-      id,
-      main_category,
-      title,
-      company,
-      view_count,
-      comment_count,
-      rating,
-      rating_count,
-      DATE_FORMAT(deadline, '%Y-%m-%d') AS deadline,
-      created_at,
-      activity_type,
-      institution_tags,
-      recruit_tags,
-      trust_tags,
-      thumbnail,
-      status
-    FROM activities
-    ${whereClause}
-    ${orderBy}
-  `;
-  db.query(sql, (err, results) => {
-    if (err) {
-      console.error('DB 에러:', err);
-      return res.status(500).json({ success: false, message: 'DB 오류' });
+  const orderBy = validSorts.includes(sort_by) ? `ORDER BY ${sort_by} DESC` : 'ORDER BY created_at DESC';
+
+  // 1) 전체 개수 조회 쿼리
+  const countSql = `SELECT COUNT(*) AS total_count FROM activities ${whereClause}`;
+
+  db.query(countSql, (countErr, countResults) => {
+    if (countErr) {
+      console.error('COUNT 에러:', countErr);
+      return res.status(500).json({ success: false, message: 'DB count 오류' });
     }
 
-    return res.status(200).json({ success: true, activities: results });
+    const totalCount = countResults[0].total_count;
+
+    // 2) 데이터 조회 쿼리
+    const dataSql = `
+      SELECT
+        id,
+        main_category,
+        title,
+        company,
+        view_count,
+        comment_count,
+        rating,
+        rating_count,
+        DATE_FORMAT(deadline, '%Y-%m-%d') AS deadline,
+        created_at,
+        activity_type,
+        institution_tags,
+        recruit_tags,
+        trust_tags,
+        thumbnail,
+        status
+      FROM activities
+      ${whereClause}
+      ${orderBy}
+      LIMIT ? OFFSET ?
+    `;
+
+    db.query(dataSql, [parseInt(limit), parseInt(offset)], (dataErr, results) => {
+      if (dataErr) {
+        console.error('DB 에러:', dataErr);
+        return res.status(500).json({ success: false, message: 'DB 오류' });
+      }
+
+      return res.status(200).json({
+        success: true,
+        activities: results,
+        total_count: totalCount,
+      });
+    });
   });
 });
+
 
 
 app.listen(port, () => {
