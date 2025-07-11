@@ -2,14 +2,16 @@ import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 import "./SkillSetEditSection.css";
 
-export const SkillSetEditSection = () => {
-  const skillRatings = [
-    { name: "커뮤니케이션", rating: 4.1, stars: 4 },
-    { name: "협업 태도", rating: 4.8, stars: 5 },
-    { name: "적극성", rating: 4.5, stars: 5 },
-    { name: "문제 해결력", rating: 3.9, stars: 4 },
-    { name: "성실성", rating: 4.3, stars: 4 },
-  ];
+export const SkillSetEditSection = ({ soft_skills = [] }) => {
+  // 점수 기반으로 별 개수 계산 함수
+  const getStarsFromScore = (score) => {
+    if (score >= 4.6) return 5;
+    if (score >= 3.6) return 4;
+    if (score >= 2.6) return 3;
+    if (score >= 1.6) return 2;
+    if (score >= 0.6) return 1;
+    return 0;
+  };
 
   const renderStars = (filledStars, totalStars = 5) => {
     return Array.from({ length: totalStars }, (_, index) => (
@@ -33,15 +35,19 @@ export const SkillSetEditSection = () => {
       </div>
 
       <CardContent className="skill-content">
-        {skillRatings.map((skill, index) => (
-          <div key={`skill-${index}`} className={`skill-row ${skill.gap}`}>
-            <div className={`skill-name ${skill.width}`}>{skill.name}</div>
-            <div className="skill-stars">
-              {renderStars(skill.stars)}
-              <div className="skill-score">({skill.rating})</div>
+        {soft_skills.map((skillObj, index) => {
+          const { skill, score } = skillObj;
+          const stars = getStarsFromScore(score);
+          return (
+            <div key={`skill-${index}`} className="skill-row">
+              <div className="skill-name">{skill}</div>
+              <div className="skill-stars">
+                {renderStars(stars)}
+                <div className="skill-score">({score})</div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </CardContent>
     </Card>
   );

@@ -19,6 +19,7 @@ export const HomePage = () => {
 
   const handleLogout = () => {
     localStorage.setItem("isLoggedIn", "false");
+    localStorage.setItem("loginID", "false");
     window.location.reload();
   };
 

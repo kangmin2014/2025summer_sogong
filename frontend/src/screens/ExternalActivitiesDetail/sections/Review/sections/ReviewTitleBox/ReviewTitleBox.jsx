@@ -5,7 +5,7 @@ export const ReviewTitleBox = ({ totalCount = 0 }) => {
   return (
     <div className="review-title-box">
       <div className="title">
-        <div className="text">이전 기수 리뷰</div>
+        <div className="basic-review-text">이전 기수 리뷰</div>
       </div>
 
       <div className="review-count">

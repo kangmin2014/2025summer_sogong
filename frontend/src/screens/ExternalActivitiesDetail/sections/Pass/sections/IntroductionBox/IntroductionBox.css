@@ -1,0 +1,146 @@
+.introduction-box {
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #b1b1b1;
+  display: flex;
+  flex-direction: column;
+  /* gap: 16px; */
+  padding-bottom: 16px;
+  position: relative;
+  width: 792px;
+
+  /* margin-top: 77px; */
+}
+
+.introduction-box .title-box {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 593px;
+  height: 19px;
+  position: relative;
+  width: 100%;
+}
+
+.introduction-box .review-box-title {
+  color: #000000;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.introduction-box .more-button {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+}
+
+.introduction-box .introductionbox-text-wrapper {
+  color: #000000;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.introduction-box .arrow {
+  height: 9px;
+  position: relative;
+  width: 5px;
+}
+
+.introduction-box .text {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.3;
+  margin-bottom: 16px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* ✅ 핵심: 긴 줄 자동 줄바꿈 허용 */
+  word-break: break-word;       /* 긴 단어 줄바꿈 허용 */
+  white-space: normal;          /* 자동 줄바꿈 허용 */
+}
+
+
+.introduction-box .info-box {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.introduction-box .date-box {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.introduction-box .introductionbox-div {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  position: relative;
+}
+
+.introduction-list {
+  display: flex;
+  flex-direction: column;
+  /* gap: 24px; */
+  margin-top: 77px;
+}
+
+.introduction-box .title-box {
+  display: flex;
+  justify-content: space-between; /* 양쪽 정렬 */
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+
+  gap: 0px;
+}
+
+.introduction-box .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.introduction-box .in-more-button {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 10px;
+  cursor: pointer;
+  font-family: "Pretendard-Regular", Helvetica;
+  padding: 0;
+  font-weight: 400;
+}

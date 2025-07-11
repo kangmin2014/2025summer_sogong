@@ -3,7 +3,7 @@
 .header-wrapper {
   display: flex;
   flex-direction: column;
-  width: 1440px;
+  width: 100%;
   align-items: flex-start;
   position: relative;
   overflow-y: visible;
@@ -63,8 +63,8 @@
 }
 
 .nav-item {
-  font-family: 'Pretendard-Bold', Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: "Pretendard-Bold", Helvetica;
+  /* font-weight: bold; */
   font-size: 1.5rem;
   color: black;
   border: none;

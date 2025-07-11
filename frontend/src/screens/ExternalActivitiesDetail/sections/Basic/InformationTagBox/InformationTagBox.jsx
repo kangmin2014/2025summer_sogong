@@ -7,37 +7,39 @@ import { RewardTag } from "./sections/Tag/RewardTag";
 
 import "./InformationTagBox.css";
 
-export const InformationTagBox = () => {
+export const InformationTagBox = ({ infoTags }) => {
+  // 혹시 infoTags가 undefined/null일 때 대비
+  const reward = infoTags?.["보상/혜택"] || [];
+  const spec = infoTags?.["스펙/이력서"] || [];
+  const efficiency = infoTags?.["효율/가성비"] || [];
+  const norisk = infoTags?.["리스크 회피"] || [];
+  const transparency = infoTags?.["투명성 검증"] || [];
+
   return (
     <div className="information-tag-box">
       <div className="reward-box">
         <div className="text-wrapper-3">보상/혜택</div>
-
-        <RewardTag className="design-component-instance-node" />
+        <RewardTag tags={reward} className="design-component-instance-node" />
       </div>
 
       <div className="div-3">
         <div className="text-wrapper-3">스펙/이력서</div>
-
-        <SpecTag className="design-component-instance-node" />
+        <SpecTag tags={spec} className="design-component-instance-node" />
       </div>
 
       <div className="div-3">
         <div className="text-wrapper-3">효율/가성비</div>
-
-        <EfficiencyTag className="design-component-instance-node" />
+        <EfficiencyTag tags={efficiency} className="design-component-instance-node" />
       </div>
 
       <div className="div-4">
         <div className="text-wrapper-3">리스크 회피</div>
-
-        <NoriskTag className="design-component-instance-node" />
+        <NoriskTag tags={norisk} className="design-component-instance-node" />
       </div>
 
       <div className="div-4">
         <div className="text-wrapper-3">투명성 검증</div>
-
-        <TransparencyTag className="design-component-instance-node" />
+        <TransparencyTag tags={transparency} className="design-component-instance-node" />
       </div>
     </div>
   );

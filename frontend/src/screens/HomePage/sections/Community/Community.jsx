@@ -76,9 +76,9 @@ export const Community = () => {
           />
         </div>
 
-        <div className="frame">
-          <div className="more-button">
-            <div className="index">커뮤니티 더보기</div>
+        <div className="community-button-frame">
+          <div className="community-more-button">
+            <div className="community-button-index">커뮤니티 더보기</div>
 
             <img
               className="arrow"

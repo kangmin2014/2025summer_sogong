@@ -20,11 +20,11 @@
   position: relative;
 }
 
-.review-title-box .text {
+.review-title-box .basic-review-text {
   color: #000000;
   font-family: "Pretendard-Bold", Helvetica;
   font-size: 24px;
-  font-weight: 700;
+  /* font-weight: 700; */
   letter-spacing: 0;
   line-height: normal;
   margin-top: -1.50px;

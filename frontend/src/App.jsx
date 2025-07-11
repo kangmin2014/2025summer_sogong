@@ -1,6 +1,8 @@
 // App.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { ContestDetail } from "./screens/ContestDetail";
+import { Contest } from "./screens/Contest";
 import { ExternalActivitiesDetail } from "./screens/ExternalActivitiesDetail";
 import { MyPageEdit } from "./screens/MyPageEdit";
 import { MyPage } from "./screens/MyPage";
@@ -13,7 +15,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/ExternalActivitiesDetail' element={<ExternalActivitiesDetail />} />
+        <Route path='/ContestDetail' element={<ContestDetail />} />
+        <Route path='/Contest' element={<Contest />} />
+        <Route path="/ExternalActivitiesDetail/:id" element={<ExternalActivitiesDetail />} /> 
         <Route path='/MyPageEdit' element={<MyPageEdit />} /> 
         <Route path='/MyPage' element={<MyPage />} />
         <Route path='/ExternalActivities' element={<ExternalActivities />} />

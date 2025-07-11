@@ -1,0 +1,55 @@
+.reviewmore-external-activities-screen {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 792px;
+}
+
+.reviewmore-external-activities-screen .reviewmore-external-activities {
+  background-color: #ffffff;
+  height: 1024px;
+  width: 1440px;
+}
+
+.reviewmore-external-activities-screen .reviewmore-overlap-group {
+  background-color: #ffffff;
+  height: auto;
+  position: relative;
+}
+
+.reviewmore-external-activities-screen .reviewmore-overlap {
+  height: auto;
+  left: 0;
+  position: absolute;
+  top: 520px;
+  width: 100%;
+}
+
+.reviewmore-external-activities-screen .reviewmore-overlap-2 {
+  height: 683px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.reviewmore-external-activities-screen .reviewmore-overlap-3 {
+  height: auto;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.reviewmore-external-activities-screen .reviewmore-poster-button-instance {
+  left: 936px !important;
+  position: absolute !important;
+  top: 66px !important;
+}
+
+.reviewmore-external-activities-screen .reviewmore-button-box-instance {
+  left: 119px !important;
+  position: absolute !important;
+  top: 2288px !important;
+}

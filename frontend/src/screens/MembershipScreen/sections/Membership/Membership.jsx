@@ -32,6 +32,11 @@ const navigate = useNavigate();
       return;
     }
 
+    if (username == "false"){
+      alert("사용할 수 없는 아이디입니다.");
+      return;
+    }
+
 
     try {
       const response = await fetch("http://localhost:5000/api/register", {

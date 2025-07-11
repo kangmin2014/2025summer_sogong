@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.efficiency-tag .efficiency-detail {
+.efficiency-tag .basic-efficiency-detail {
   align-items: center;
   background-color: #e6ecf0;
   border-radius: 8px;
@@ -16,7 +16,7 @@
   justify-content: center;
   padding: 10px 6px;
   position: relative;
-  width: 82px;
+  width: auto;
 }
 
 .efficiency-tag .text-wrapper {

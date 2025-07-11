@@ -1,20 +1,31 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./ProjectAchievementsEditSection.css";
 
-export const ProjectAchievementsEditSection = () => {
-  const initialAchievements = [
-    { date: "2025-02", description: "AI학습법 아이디어톤 우수상" },
-    { date: "2024-05", description: "숭실대학교 Wish 해커톤 금상" },
-    { date: "2023-09", description: "SSU 소프트웨어 공모전 본선 진출 / 대상" },
-  ];
-
-  const [achievements, setAchievements] = useState(initialAchievements);
+export const ProjectAchievementsEditSection = ({
+  project_achievements = [],
+  setProjectAchievements,
+}) => {
+  const [achievements, setAchievements] = useState(project_achievements);
   const monthRefs = useRef({});
 
+  // props 값이 변경될 때 내부 상태도 동기화
+  useEffect(() => {
+    setAchievements(project_achievements);
+  }, [project_achievements]);
+
+  // 날짜 포맷 변경: YYYY-MM → YYYY.MM
   const handleChange = (index, field, value) => {
     const updated = [...achievements];
-    updated[index][field] = value;
+
+    if (field === "date" && value.includes("-")) {
+      const [year, month] = value.split("-");
+      updated[index][field] = `${year}.${month}`;
+    } else {
+      updated[index][field] = value;
+    }
+
     setAchievements(updated);
+    setProjectAchievements && setProjectAchievements(updated);
   };
 
   const handleAdd = () => {
@@ -22,19 +33,21 @@ export const ProjectAchievementsEditSection = () => {
       alert("최대 7개까지 등록할 수 있습니다.");
       return;
     }
-    setAchievements([...achievements, { date: "", description: "" }]);
+    const updated = [...achievements, { date: "", description: "" }];
+    setAchievements(updated);
+    setProjectAchievements && setProjectAchievements(updated);
   };
 
   const handleDelete = (index) => {
     const updated = [...achievements];
     updated.splice(index, 1);
     setAchievements(updated);
+    setProjectAchievements && setProjectAchievements(updated);
   };
 
+  // 표시용 포맷 (이미 저장된 YYYY.MM 형식 그대로 출력)
   const formatFullMonth = (value) => {
-    if (!value) return "";
-    const [year, month] = value.split("-");
-    return `${year}.${month}`;
+    return value || "날짜";
   };
 
   const focusMonthInput = (index) => {
@@ -62,13 +75,20 @@ export const ProjectAchievementsEditSection = () => {
               className="month-display"
               onClick={() => focusMonthInput(index)}
             >
-              {achievement.date ? formatFullMonth(achievement.date) : "날짜"}
+              {formatFullMonth(achievement.date)}
               <input
                 type="month"
                 className="hidden-month"
-                value={achievement.date}
+                // input에는 다시 YYYY-MM 형식으로 변환해서 보여줌
+                value={
+                  achievement.date
+                    ? achievement.date.replace(".", "-")
+                    : ""
+                }
                 ref={(el) => (monthRefs.current[index] = el)}
-                onChange={(e) => handleChange(index, "date", e.target.value)}
+                onChange={(e) =>
+                  handleChange(index, "date", e.target.value)
+                }
               />
             </div>
 

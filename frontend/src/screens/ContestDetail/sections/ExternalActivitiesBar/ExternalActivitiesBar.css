@@ -1,0 +1,52 @@
+.basic-select {
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #a3a3a3;
+  box-shadow: 0px 4px 4px #00000040;
+  display: flex;
+  gap: 15px;
+  height: 42px;
+  padding: 0px 0px 0px 120px;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+
+  top: 196px;
+}
+
+.basic-select .basic {
+  align-items: center;
+  border-bottom: 2px solid #000000;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 9px 0px;
+  cursor: pointer;
+}
+
+.basic-select .text {
+  color: #000000;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.basic-select .text-wrapper {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px 0px;
+  cursor: pointer;
+}
+
+.basic-select .div {
+  color: #a3a3a3;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  white-space: nowrap;
+}

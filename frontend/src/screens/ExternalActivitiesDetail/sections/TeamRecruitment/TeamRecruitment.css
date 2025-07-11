@@ -1,0 +1,297 @@
+/* 전체 컨테이너 */
+.team-recruitment {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.team-recruitment-overlap-group {
+  background-color: #ffffff;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ───────── HeadInfoBox ───────── */
+.teamrecruit-head-info-box {
+  border-bottom: 1px solid #a3a3a3;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.teamrecruit-head-info-box .title {
+  padding: 24px 0 16px;
+}
+
+.teamrecruit-head-info-box .teamrecruitment-text-wrapper {
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  color: #000000;
+}
+
+.teamrecruit-head-info-box .information-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teamrecruit-head-info-box .profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: 80%;
+}
+
+.teamrecruit-head-info-box .profile img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+
+.teamrecruit-head-info-box .team-ID {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 16px;
+  color: #000;
+  width: 100%;
+}
+
+.teamrecruit-head-info-box .info-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+}
+
+.teamrecruit-head-info-box .view-box
+.teamrecruit-head-info-box .navbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.teamrecruitment-navbar {
+  width: auto;
+}
+
+.recruitment-inline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+
+  padding-top: 1px;
+}
+
+
+.view-box {
+  font-size: 12px;
+}
+
+.teamrecruit-head-info-box .teamrecruitment-teamrecruitment-text-wrapper-2 {
+  font-size: 12px;
+  color: #a3a3a3;
+  font-family: "Pretendard-Regular", Helvetica;
+}
+
+.teamrecruit-head-info-box .teamrecruitment-text-wrapper-3 {
+  font-size: 12px;
+  color: #ff0000;
+  font-family: "Pretendard-Regular", Helvetica;
+}
+
+/* ───────── D-Day Box ───────── */
+.dday-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 3px;
+}
+
+.dday-box .text {
+  font-size: 12px;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dday-box.long-term .text {
+  color: #a3a3a3;
+}
+
+.dday-box.short-term .text {
+  color: #0094ff;
+}
+
+.dday-box.today .text {
+  color: #ff0000;
+}
+
+/* ───────── TitleBox ───────── */
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 24px 0;
+}
+
+.title-box .title {
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 20px;
+  color: #000;
+}
+
+.title-box .link-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.title-box .icon {
+  width: 16px;
+}
+
+.title-box .link-text {
+  font-size: 12px;
+  color: #a3a3a3;
+  text-decoration: underline;
+  font-family: "Pretendard-Medium", Helvetica;
+}
+
+/* ───────── DetailBox ───────── */
+.detail-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.detail-box .teamrecruitment-div,
+.detail-box .how-box,
+.detail-box .want-box {
+  display: flex;
+  gap: 46px;
+}
+
+.detail-box .teamrecruitment-text-wrapper {
+  font-size: 16px;
+  font-family: "Pretendard-Medium", Helvetica;
+  color: #000;
+}
+
+
+/* ───────── ProfileTitleBox ───────── */
+.profile-title-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+.profile-title-box .title {
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 20px;
+  color: #000;
+}
+
+.profile-title-box .volunteer-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.volunteer-info-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+
+.profile-title-box .teamrecruitment-text-wrapper {
+  font-size: 12px;
+  font-family: "Pretendard-Medium", Helvetica;
+  color: #000;
+}
+
+/* ───────── ProfileList ───────── */
+.profile-list {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* ───────── Leader / Member ───────── */
+.leader,
+.team {
+  width: 180px;
+  height: 207px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px #00000040;
+  background-color: #fff;
+}
+
+.leader {
+  border: 1px solid #0094ff;
+}
+
+.team {
+  border: 1px solid #004faa;
+}
+
+.leader .picture,
+.team .picture {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.nickname {
+  font-size: 14px;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  text-align: center;
+  color: #000;
+}
+
+.position {
+  font-size: 10px;
+  font-family: "Pretendard-Medium", Helvetica;
+  color: #000;
+  text-align: center;
+}
+
+.visit-button {
+  background-color: #0094ff;
+  border-radius: 8px;
+  padding: 4px 8px;
+  width: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team .visit-button {
+  background-color: #004faa;
+}
+
+.visit-button .text {
+  font-size: 10px;
+  font-family: "Pretendard-Medium", Helvetica;
+  color: #fff;
+  white-space: nowrap;
+}
+

@@ -1,3 +1,5 @@
+/* InterestAreaSection.css */
+
 .interest-section {
   display: flex;
   flex-direction: column;
@@ -30,10 +32,13 @@
 }
 
 .interest-tags {
-  display: inline-flex;
+  display: flex; /* 기존 inline-flex → flex로 변경 */
+  flex-wrap: wrap; /* ✅ 줄바꿈 허용 */
   align-items: center;
-  gap: 16px;
+  gap: 9px;
+  width: 100%; /* 필요 시 조정 가능 */
 }
+
 
 .interest-tag {
   display: inline-flex;
@@ -64,4 +69,16 @@
 
 .interest-label.orange {
   color: #ff8c00;
+}
+
+.interest-label.yellow {
+  color: #f0bc00;
+}
+
+.interest-label.red {
+  color: #ff484b;
+}
+
+.interest-label.blue {
+  color: #0095FF;
 }

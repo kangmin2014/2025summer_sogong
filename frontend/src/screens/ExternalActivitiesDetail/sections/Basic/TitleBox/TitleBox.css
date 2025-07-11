@@ -10,7 +10,7 @@
   /* left: 120px; */
 }
 
-.title-box .title {
+.title-box .detail-basic-title {
   align-items: center;
   display: inline-flex;
   flex: 0 0 auto;
@@ -20,11 +20,11 @@
   position: relative;
 }
 
-.title-box .text {
+.title-box .detail-basic-text {
   color: #000000;
   font-family: "Pretendard-Bold", Helvetica;
   font-size: 24px;
-  font-weight: 700;
+  /* font-weight: 700; */
   letter-spacing: 0;
   line-height: normal;
   margin-top: -1.50px;

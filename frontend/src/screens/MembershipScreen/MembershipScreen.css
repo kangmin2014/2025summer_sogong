@@ -43,7 +43,7 @@
 
   font-family: 'Pretendard-Bold', Helvetica, sans-serif;
   font-size: 36px; /* text-5xl */
-  font-weight: bold;
+  /* font-weight: bold; */
   color: black;
   white-space: nowrap;
 }

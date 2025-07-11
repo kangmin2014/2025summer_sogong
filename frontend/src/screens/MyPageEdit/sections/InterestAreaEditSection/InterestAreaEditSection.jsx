@@ -1,17 +1,17 @@
-// InterestAreaEditSection.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./InterestAreaEditSection.css";
 
-export const InterestAreaEditSection = () => {
-  const [visibleTags, setVisibleTags] = useState({
-    기획: true,
-    프론트엔드: true,
-    백엔드: true,
-    디자인: true,
-    마케팅: true,
-    창업: true,
-  });
+export const InterestAreaEditSection = ({ interests = [], setInterests }) => {
+  const initialTags = {
+    기획: false,
+    프론트엔드: false,
+    백엔드: false,
+    디자인: false,
+    마케팅: false,
+    창업: false,
+  };
 
+  const [visibleTags, setVisibleTags] = useState(initialTags);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const interestAreas = [
@@ -23,12 +23,31 @@ export const InterestAreaEditSection = () => {
     { label: "#창업", key: "창업", color: "yellow", deleteIcon: "https://i.postimg.cc/02fyv8xW/delete-Startup.png" },
   ];
 
+  // 최초 interests 값으로 초기화
+  useEffect(() => {
+    const newVisibleTags = { ...initialTags };
+    interests.forEach((tag) => {
+      if (newVisibleTags.hasOwnProperty(tag)) {
+        newVisibleTags[tag] = true;
+      }
+    });
+    setVisibleTags(newVisibleTags);
+  }, [interests]);
+
+  // 태그 삭제
   const handleDelete = (key) => {
-    setVisibleTags((prev) => ({ ...prev, [key]: false }));
+    const updated = { ...visibleTags, [key]: false };
+    setVisibleTags(updated);
+    const selected = Object.keys(updated).filter(k => updated[k]);
+    setInterests(selected);  // 상위에 전달
   };
 
+  // 태그 추가
   const handleAddTag = (key) => {
-    setVisibleTags((prev) => ({ ...prev, [key]: true }));
+    const updated = { ...visibleTags, [key]: true };
+    setVisibleTags(updated);
+    const selected = Object.keys(updated).filter(k => updated[k]);
+    setInterests(selected);  // 상위에 전달
     setShowDropdown(false);
   };
 

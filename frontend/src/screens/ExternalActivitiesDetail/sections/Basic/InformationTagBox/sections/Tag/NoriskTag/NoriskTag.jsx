@@ -1,16 +1,14 @@
 import React from "react";
 import "./NoriskTag.css";
 
-export const NoriskTag = () => {
+export const NoriskTag = ({ tags }) => {
   return (
     <div className="norisk-tag">
-      <div className="norisk-detail">
-        <div className="text-wrapper">#저작권명확화</div>
-      </div>
-
-      <div className="norisk-detail">
-        <div className="text-wrapper">#피해사례없음</div>
-      </div>
+      {tags.map((tag, index) => (
+        <div key={index} className="norisk-detail">
+          <div className="text-wrapper">#{tag}</div>
+        </div>
+      ))}
     </div>
   );
 };

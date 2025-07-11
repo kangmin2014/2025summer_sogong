@@ -1,0 +1,265 @@
+/* 전체 레이아웃 */
+.reviewmore-external-activities-screen {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.reviewmore-external-activities {
+  background-color: #ffffff;
+  min-height: auto;
+  width: 100%;
+}
+
+.reviewmore-overlap-group {
+  background-color: #ffffff;
+  position: relative;
+  padding: 24px;
+}
+
+/* HeadInfoBox */
+.head-info-box {
+  align-items: flex-start;
+  border-bottom: 1px solid #b1b1b1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.head-info-box .title {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding: 24px 0 16px;
+  width: 100%;
+}
+
+.head-info-box .text {
+  color: #000000;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.head-info-box .information-box {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  width: 100%;
+}
+
+.head-info-box .profile-box {
+  align-items: center;
+  display: inline-flex;
+  gap: 12px;
+}
+
+.head-info-box .profile {
+  height: 32px;
+  width: 32px;
+  object-fit: cover;
+}
+
+.head-info-box .ID {
+  color: #000000;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.head-info-box .date {
+  color: #a3a3a3;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.head-info-box .view-scrap {
+  display: inline-flex;
+  gap: 16px;
+}
+
+.head-info-box .contest-reviewmore-div {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.head-info-box .contest-reviewmore-text-wrapper {
+  color: #a3a3a3;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: -1px;
+}
+
+/* ReviewBox */
+.reviewmore-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  padding-bottom: 12px;
+  width: 100%;
+}
+
+.overall-rating-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  width: 100%;
+}
+
+.overall-rating {
+  color: #000000;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.star-box {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #b1b1b1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 96px;
+  justify-content: center;
+  width: 180px;
+}
+
+.star-point {
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+}
+
+.review-star {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.star-2 {
+  height: 24px;
+  width: 24px;
+}
+
+.tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  width: 588px;
+  height: auto;
+}
+
+.tag {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* ParnassusBox */
+.parnassus-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.parnassus-title-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 0;
+}
+
+.rectangle {
+  background-color: #696665;
+  width: 8px;
+  height: 24px;
+}
+
+.parnassus-title {
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.parnassus-text-box {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.parnassus-text {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000000;
+  width: 100%;
+}
+
+.tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 16px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  height: 22px;
+  position: relative;
+}
+
+.tag-title {
+  color: #696665;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: -1px;
+}
+
+.tag-divider {
+  background-color: #999999;
+  width: 1px;
+  height: 12px;
+  object-fit: cover;
+}
+
+.tag-value {
+  color: #000000;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: -1px;
+}

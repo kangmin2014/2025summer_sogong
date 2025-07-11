@@ -1,0 +1,220 @@
+/* ───── 전체 Wrapper ───── */
+.external-activities-team {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+.external-activities-team .overlap-group-wrapper {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.external-activities-team .overlap-group {
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* ───── 제목 + 전체 개수 표시 ───── */
+.external-activities-team .out-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b1b1b1;
+  padding: 24px 0px;
+  width: 792px;
+}
+
+.external-activities-team .div-wrapper {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  gap: 10px;
+}
+
+.external-activities-team .contest-text-3 {
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  color: #000000;
+  margin-top: -1.5px;
+  width: fit-content;
+}
+
+.external-activities-team .review-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.external-activities-team .text-wrapper-2 {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  color: #a3a3a3;
+  font-weight: 500;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+/* ───── 카드 목록 ───── */
+.external-activities-team .contest-teamframe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 12px;
+  margin-top: 24px;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+/* ───── 카드 단일 박스 ───── */
+.recruitment-box {
+  background-color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  width: 384px;
+  position: relative;
+}
+
+.recruitment-box .picture {
+  width: 105px;
+  height: 105px;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
+}
+
+.recruitment-box .detail-box {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #b1b1b1;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  padding: 12px 0 21px 12px;
+  width: 282px;
+  gap: 16px;
+}
+
+.recruitment-box .title-nickname-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.recruitment-box .title {
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: -1px;
+  width: 100%;
+}
+
+.recruitment-box .nickname {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  color: #000000;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.recruitment-box .information-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.recruitment-box .view-box {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.recruitment-box .situation-box {
+  display: inline-flex;
+  gap: 1px;
+  align-items: center;
+}
+
+.recruitment-box .div {
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  color: #ff0000;
+  white-space: nowrap;
+}
+
+.recruitment-box .recruitmentbox-text-wrapper {
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  color: #a3a3a3;
+  white-space: nowrap;
+}
+
+/* ───── D-day ───── */
+.dday-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dday-box .team-text {
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dday-box.long-term .team-text {
+  color: #a3a3a3;
+}
+
+.dday-box.short-term .team-text {
+  color: #0094ff;
+}
+
+.dday-box.today .team-text {
+  color: #ff0000;
+}
+
+.dday-ended {
+  color: #b1b1b1;
+}
+
+/* ───── 더보기 버튼 ───── */
+.team-more-button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 792px;
+  margin-top: 32px;
+  padding: 36px 32px;
+}
+
+.team-more-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b1b1b1;
+  border-radius: 8px;
+  padding: 8px 10px;
+  width: 100%;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.team-more-button:hover {
+  background-color: #f5f5f5;
+}
+
+.team-more-button .text {
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  white-space: nowrap;
+}

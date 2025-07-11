@@ -14,7 +14,7 @@
   color: #000000;
   font-family: "Pretendard-Bold", Helvetica;
   font-size: 20px;
-  font-weight: 700;
+  /* font-weight: 700; */
   letter-spacing: 0;
   line-height: normal;
   margin-top: -1.00px;
@@ -68,7 +68,7 @@
   width: 100%;
 }
 
-.community .frame {
+.community .community-button-frame {
   align-items: flex-start;
   align-self: stretch;
   display: flex;
@@ -80,7 +80,7 @@
   width: 100%;
 }
 
-.community .more-button {
+.community .community-more-button {
   align-items: center;
   display: flex;
   flex: 0 0 auto;
@@ -89,7 +89,7 @@
   width: 74px;
 }
 
-.community .index {
+.community .community-button-index {
   color: #696665;
   font-family: "Pretendard-Regular", Helvetica;
   font-size: 10px;
@@ -100,6 +100,8 @@
   position: relative;
   white-space: nowrap;
   width: fit-content;
+
+  border: none;
 }
 
 .community .arrow {

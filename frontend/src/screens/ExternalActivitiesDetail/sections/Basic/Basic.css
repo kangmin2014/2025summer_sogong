@@ -20,11 +20,11 @@
   height: 28px;
 }
 
-.text-7 {
+.basic-text-7 {
   color: #000000;
   font-family: "Pretendard-Bold", Helvetica;
   font-size: 24px;
-  font-weight: 700;
+  /* font-weight: 700; */
   line-height: normal;
 }
 
@@ -39,11 +39,11 @@
   width: 100%;
 }
 
-.text-6 {
+.basic-text-6 {
   color: #000000;
   font-family: "Pretendard-Bold", Helvetica;
   font-size: 24px;
-  font-weight: 700;
+  /* font-weight: 700; */
   line-height: normal;
 }
 

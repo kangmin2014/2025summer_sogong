@@ -1,3 +1,4 @@
+
 .first-information {
   position: relative;
   background-image: url(./img/first-information-box.png);
@@ -184,4 +185,64 @@
   object-fit: cover;
   position: relative;
   width: 100%;
+}
+
+.HOT-tag {
+  align-items: center;
+  background-color: #ff0000;
+  border-radius: 4px;
+  display: inline-flex;
+  gap: 10px;
+  height: 24px;
+  justify-content: center;
+  padding: 4px 12px;
+}
+
+.NEW-tag {
+  align-items: center;
+  background-color: #0094ff;
+  border-radius: 4px;
+  display: inline-flex;
+  gap: 10px;
+  height: 24px;
+  justify-content: center;
+  padding: 4px 12px;
+}
+
+.HOT-tag .text,
+.NEW-tag .text {
+  color: #fff;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tag-gather {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.tag-gather .div-wrapper {
+  align-items: center;
+  background-color: #696665;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px #00000040;
+  display: inline-flex;
+  gap: 10px;
+  padding: 4px 6px;
+}
+
+.tag-gather .text-wrapper {
+  color: #ffffff;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.first-information .tag-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }

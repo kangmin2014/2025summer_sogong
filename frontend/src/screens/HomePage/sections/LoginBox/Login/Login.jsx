@@ -23,8 +23,8 @@ export const Login = ({ onLogout, data }) => {
     try {
       const loginID = localStorage.getItem("loginID");
       console.warn("loginID:", loginID);
-      if (!loginID) {
-        console.warn("loginID not found in localStorage");
+      if (!loginID || loginID=="false") {
+        console.warn("존재하지 않는 회원");
         return;
       }
 
@@ -50,9 +50,9 @@ export const Login = ({ onLogout, data }) => {
 
       setNickname(data.user.nickname);
 
-      // 프로필 이미지가 있다면 아래 코드 활성화
-      // if (data.user.profileimg) {
-      //   setProfileimg(data.user.profileimg);
+            if (data.user.profile_img) {
+        setProfileimg(data.user.profile_img);
+      }
       // }
     } catch (error) {
       console.error("Error fetching nickname:", error);
@@ -86,7 +86,7 @@ export const Login = ({ onLogout, data }) => {
             </Avatar>
 
             <div className="login-user-info">
-              <div className="nickname">{nickname || "닉네임 없음"}</div>
+              <div className="loginnickname">{nickname || "닉네임 없음"}</div>
               <Button variant="link" className="profile-detail-btn" onClick={goToMyPage}>
                 프로필 상세 정보
                 <img

@@ -1,50 +1,60 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ActivitySummaryEditSection.css";
 
-export const ActivitySummaryEditSection = () => {
-  const initialActivities = [
-    {
-      startDate: "2025-01",
-      endDate: "2025-02",
-      description: "AI학습법 아이디어톤",
-    },
-  ];
+export const ActivitySummaryEditSection = ({ activity_history = [], setActivityHistory }) => {
+  const [activities, setActivities] = useState(activity_history);
+  const monthRefs = useRef({});
 
-  const [activities, setActivities] = useState(initialActivities);
-  const monthRefs = useRef({}); // input ref 저장
+  useEffect(() => {
+    setActivities(activity_history);
+  }, [activity_history]);
+
+  // 공통 함수
+  const formatYearMonth = (value) => {
+    if (!value) return "";
+    const [year, month] = value.split("-");
+    return `${year.slice(2)}.${month}`;
+  };
+
+  // date 저장용 변환 함수
+  const convertToStorageFormat = (start, end) => {
+    const s = formatYearMonth(start);
+    const e = formatYearMonth(end);
+    return s && e ? `${s} ~ ${e}` : "";
+  };
+
+  // 필드 변경 시
+  const handleChange = (index, field, value) => {
+    const updated = [...activities];
+    updated[index][field] = value;
+
+    // date 필드를 별도로 만들어서 저장할 때도 같이 업데이트
+    updated[index].date = convertToStorageFormat(updated[index].startDate, updated[index].endDate);
+
+    setActivities(updated);
+    setActivityHistory && setActivityHistory(updated);
+  };
 
   const handleAdd = () => {
     if (activities.length >= 7) {
       alert("최대 7개까지 등록할 수 있습니다.");
       return;
     }
-    setActivities([
-      ...activities,
-      { startDate: "", endDate: "", description: "" },
-    ]);
-  };
-
-  const handleChange = (index, field, value) => {
-    const updated = [...activities];
-    updated[index][field] = value;
+    const updated = [...activities, { startDate: "", endDate: "", date: "", description: "" }];
     setActivities(updated);
+    setActivityHistory && setActivityHistory(updated);
   };
 
   const handleDelete = (index) => {
     const updated = [...activities];
     updated.splice(index, 1);
     setActivities(updated);
-  };
-
-  const formatMonth = (value) => {
-    if (!value) return "";
-    const [year, month] = value.split("-");
-    return `${year.slice(2)}.${month}`;
+    setActivityHistory && setActivityHistory(updated);
   };
 
   const focusMonthInput = (index, field) => {
     const ref = monthRefs.current[`${index}-${field}`];
-    ref?.showPicker?.(); // modern browsers
+    ref?.showPicker?.();
   };
 
   return (
@@ -63,55 +73,46 @@ export const ActivitySummaryEditSection = () => {
       <div className="activity-summary-edit-content">
         {activities.map((activity, index) => (
           <div key={index} className="activity-summary-edit-item">
-            {/* 시작 */}
             <div
               className="month-display"
               onClick={() => focusMonthInput(index, "startDate")}
             >
-              {activity.startDate ? formatMonth(activity.startDate) : "시작"}
+              {activity.startDate ? formatYearMonth(activity.startDate) : "시작"}
               <input
                 type="month"
                 className="hidden-month"
                 ref={(el) => {
                   monthRefs.current[`${index}-startDate`] = el;
                 }}
-                value={activity.startDate}
-                onChange={(e) =>
-                  handleChange(index, "startDate", e.target.value)
-                }
+                value={activity.startDate || ""}
+                onChange={(e) => handleChange(index, "startDate", e.target.value)}
               />
             </div>
 
             <span className="tilde">~</span>
 
-            {/* 끝 */}
             <div
               className="month-display"
               onClick={() => focusMonthInput(index, "endDate")}
             >
-              {activity.endDate ? formatMonth(activity.endDate) : "끝"}
+              {activity.endDate ? formatYearMonth(activity.endDate) : "끝"}
               <input
                 type="month"
                 className="hidden-month"
                 ref={(el) => {
                   monthRefs.current[`${index}-endDate`] = el;
                 }}
-                value={activity.endDate}
-                onChange={(e) =>
-                  handleChange(index, "endDate", e.target.value)
-                }
+                value={activity.endDate || ""}
+                onChange={(e) => handleChange(index, "endDate", e.target.value)}
               />
             </div>
 
-            {/* 설명 */}
             <input
               className="activity-input description"
               type="text"
               placeholder="활동 설명 입력"
-              value={activity.description}
-              onChange={(e) =>
-                handleChange(index, "description", e.target.value)
-              }
+              value={activity.description || ""}
+              onChange={(e) => handleChange(index, "description", e.target.value)}
             />
 
             <button className="delete-button" onClick={() => handleDelete(index)}>

@@ -1,36 +1,56 @@
 import React, { useRef, useState } from "react";
 import "./UserProfileEditSection.css";
 
-export const UserProfileEditSection = () => {
-  const [profileImage, setProfileImage] = useState("https://c.animaapp.com/OhEHVw08/img/picture@2x.png");
-  const [nickname, setNickname] = useState("닉네임");
+export const UserProfileEditSection = ({
+  username,
+  nickname,
+  setNickname,
+  profile_img,
+  setProfileImg,
+  participation_rate,
+  setParticipationRate,
+  trust_score,
+  setTrustScore,
+  onProfileImgChange, // ✅ 상위에서 전달받은 콜백
+}) => {
   const [isEditingNickname, setIsEditingNickname] = useState(false);
   const [nicknameError, setNicknameError] = useState(false);
-
   const fileInputRef = useRef(null);
-
-  const userProfile = {
-    username: "아이디",
-    participationRate: "96%",
-    trustRating: "4.7",
-  };
 
   const handleImageClick = () => {
     fileInputRef.current.click();
   };
 
-  const handleImageChange = (e) => {
+  const handleImageChange = async (e) => {
     const file = e.target.files[0];
-    if (file) {
-      const imageUrl = URL.createObjectURL(file);
-      setProfileImage(imageUrl);
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("profile_img", file);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/upload-profile", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.success && data.url) {
+        setProfileImg(data.url); // 영구 URL 저장
+        if (onProfileImgChange) {
+          onProfileImgChange(data.url); // ✅ DB 저장용 URL 전달
+        }
+      } else {
+        alert("이미지 업로드에 실패했습니다.");
+      }
+    } catch (error) {
+      console.error("이미지 업로드 오류:", error);
+      alert("이미지 업로드 중 오류가 발생했습니다.");
     }
   };
 
   const handleNicknameChange = (e) => {
     const value = e.target.value;
-
-    // 한글 10자 또는 영문/숫자 13자 제한
     const koreanLength = value.match(/[ㄱ-ㅎ|가-힣]/g)?.length || 0;
     const englishLength = value.length;
 
@@ -62,7 +82,7 @@ export const UserProfileEditSection = () => {
         <div className="user-profile-top">
           <div className="user-avatar" onClick={handleImageClick}>
             <img
-              src={profileImage}
+              src={profile_img}
               alt="User profile"
               className="user-avatar-img"
             />
@@ -101,7 +121,9 @@ export const UserProfileEditSection = () => {
             )}
             <div className="user-id-box">
               <span className="user-id-at">@</span>
-              <span className="user-id-text">{userProfile.username}</span>
+              <span className="user-id-text">
+                {username && username.trim() !== "" ? username : "아이디없음"}
+              </span>
             </div>
           </div>
         </div>
@@ -114,7 +136,7 @@ export const UserProfileEditSection = () => {
               src="https://c.animaapp.com/OhEHVw08/img/fire-icon.svg"
             />
             <span className="stat-label">참여율</span>
-            <span className="stat-value">{userProfile.participationRate}</span>
+            <span className="stat-value">{participation_rate}%</span>
           </div>
 
           <div className="stat-box">
@@ -124,7 +146,7 @@ export const UserProfileEditSection = () => {
               src="https://c.animaapp.com/OhEHVw08/img/star.svg"
             />
             <span className="stat-label">신뢰도 평가</span>
-            <span className="stat-value">{userProfile.trustRating}</span>
+            <span className="stat-value">{trust_score}</span>
           </div>
         </div>
       </div>

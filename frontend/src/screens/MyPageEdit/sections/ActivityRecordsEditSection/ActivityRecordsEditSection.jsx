@@ -1,38 +1,73 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./ActivityRecordsEditSection.css";
 
-export const ActivityRecordsEditSection = () => {
+export const ActivityRecordsEditSection = ({
+  certifications = [],
+  language_tests = [],
+  setCertifications,
+  setLanguageTests,
+}) => {
   const [records, setRecords] = useState([
-    { type: "language", date: "2022-07", description: "TOEIC 920점" },
-    { type: "certification", date: "2023-05", description: "GTQ 포토샵 1급" },
-    { type: "certification", date: "2022-09", description: "컴퓨터 활용 능력 1급" },
+    ...language_tests.map((item) => ({ ...item, type: "language" })),
+    ...certifications.map((item) => ({ ...item, type: "certification" })),
   ]);
 
   const monthRefs = useRef({});
+
+  useEffect(() => {
+    const combined = [
+      ...language_tests.map((item) => ({ ...item, type: "language" })),
+      ...certifications.map((item) => ({ ...item, type: "certification" })),
+    ];
+    setRecords(combined);
+  }, [language_tests, certifications]);
 
   const handleAdd = (type) => {
     if (records.length >= 6) {
       alert("최대 6개까지 등록할 수 있습니다.");
       return;
     }
-    setRecords([...records, { type, date: "", description: "" }]);
+    const updated = [...records, { type, date: "", description: "" }];
+    setRecords(updated);
+    updateParent(updated);
   };
 
   const handleDelete = (index) => {
     const updated = [...records];
     updated.splice(index, 1);
     setRecords(updated);
+    updateParent(updated);
   };
 
   const handleChange = (index, field, value) => {
     const updated = [...records];
-    updated[index][field] = value;
+
+    // ✅ 날짜 형식을 YYYY.MM으로 저장
+    if (field === "date" && value) {
+      const [year, month] = value.split("-");
+      updated[index][field] = `${year}.${month}`;
+    } else {
+      updated[index][field] = value;
+    }
+
     setRecords(updated);
+    updateParent(updated);
+  };
+
+  const updateParent = (updated) => {
+    const langs = updated
+      .filter((r) => r.type === "language")
+      .map(({ type, ...rest }) => rest);
+    const certs = updated
+      .filter((r) => r.type === "certification")
+      .map(({ type, ...rest }) => rest);
+    setLanguageTests && setLanguageTests(langs);
+    setCertifications && setCertifications(certs);
   };
 
   const formatMonth = (value) => {
     if (!value) return "";
-    const [year, month] = value.split("-");
+    const [year, month] = value.split(".");
     return `${year}.${month}`;
   };
 
@@ -55,7 +90,12 @@ export const ActivityRecordsEditSection = () => {
               type="month"
               className="hidden-month"
               ref={(el) => (monthRefs.current[item.originalIndex] = el)}
-              value={item.date}
+              // ✅ YYYY.MM → YYYY-MM로 변환해서 input에 표시
+              value={
+                item.date && item.date.includes(".")
+                  ? item.date.replace(".", "-")
+                  : item.date
+              }
               onChange={(e) =>
                 handleChange(item.originalIndex, "date", e.target.value)
               }
@@ -118,7 +158,6 @@ export const ActivityRecordsEditSection = () => {
         </div>
         {renderRecords("certification")}
       </div>
-
     </section>
   );
 };
