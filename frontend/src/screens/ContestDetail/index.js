@@ -1,0 +1,1 @@
+export { ContestDetail } from "./ContestDetail";

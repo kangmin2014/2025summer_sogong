@@ -1,0 +1,1 @@
+export { EfficiencyTag } from "./EfficiencyTag";

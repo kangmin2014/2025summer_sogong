@@ -1,0 +1,1 @@
+export { PassComment } from "./PassComment";

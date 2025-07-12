@@ -1,12 +1,17 @@
+// InterestAreaSection.jsx
+
 import React from "react";
 import "./InterestAreaSection.css";
 
-export const InterestAreaSection = () => {
-  const interestAreas = [
-    { id: 1, label: "#기획", color: "green" },
-    { id: 2, label: "#디자인", color: "pink" },
-    { id: 3, label: "#마케팅", color: "orange" },
-  ];
+export const InterestAreaSection = ({ interests = [] }) => {
+  const interestColors = {
+    기획: "green",
+    프론트엔드: "red",
+    백엔드: "blue",
+    디자인: "pink",
+    마케팅: "orange",
+    창업: "yellow",
+  };
 
   return (
     <section className="interest-section">
@@ -15,9 +20,11 @@ export const InterestAreaSection = () => {
       </header>
 
       <div className="interest-tags">
-        {interestAreas.map((area) => (
-          <div key={area.id} className="interest-tag">
-            <div className={`interest-label ${area.color}`}>{area.label}</div>
+        {interests.map((tag, index) => (
+          <div key={index} className="interest-tag">
+            <div className={`interest-label ${interestColors[tag] || ""}`}>
+              #{tag}
+            </div>
           </div>
         ))}
       </div>

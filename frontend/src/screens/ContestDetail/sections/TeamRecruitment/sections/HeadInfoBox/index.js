@@ -1,0 +1,1 @@
+export { HeadInfoBox } from "./HeadInfoBox";

@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "../../../../components/ui/button1";
 import { Separator } from "../../../../components/ui/separator";
 import './FilterComponentSection.css';
 
-export const FilterComponentSection = () => {
-  const [activeFilter, setActiveFilter] = useState("전체");
-
+export const FilterComponentSection = ({ activeFilter, setActiveFilter }) => {
   const filterCategories = [
     {
       id: "전체",
@@ -64,7 +62,7 @@ export const FilterComponentSection = () => {
   ];
 
   const searchIcon = {
-    active: "https://i.postimg.cc/Jzm5D0Wb/search-icon.png",  // 원하는 아이콘으로 교체
+    active: "https://i.postimg.cc/Jzm5D0Wb/search-icon.png",
     inactive: "https://c.animaapp.com/JL2GbBWa/img/search-icon.svg",
   };
 
@@ -101,11 +99,11 @@ export const FilterComponentSection = () => {
             aria-selected={activeFilter === category.id}
             aria-label={`Filter by ${category.label}`}
           >
-          <img
-            className="category-icon"
-            alt=""
-            src={activeFilter === category.id ? category.activeicon : category.inactiveicon}
-          />
+            <img
+              className="category-icon"
+              alt=""
+              src={activeFilter === category.id ? category.activeicon : category.inactiveicon}
+            />
             <span className={`category-label ${activeFilter === category.id ? "active-label" : ""}`}>
               {category.label}
             </span>

@@ -1,0 +1,32 @@
+.tag-gather {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  position: relative;
+}
+
+.tag-gather .div-wrapper {
+  align-items: center;
+  background-color: #696665;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px #00000040;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 4px 6px;
+  position: relative;
+}
+
+.tag-gather .text-wrapper {
+  color: #ffffff;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}

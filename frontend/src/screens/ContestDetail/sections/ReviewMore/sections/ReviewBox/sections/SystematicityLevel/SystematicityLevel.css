@@ -1,0 +1,40 @@
+.systematicity-container {
+  align-items: center;
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  padding: 4px 8px;
+  position: relative;
+}
+
+.label-title {
+  color: #696665;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+  margin-top: -1px;
+}
+
+.line {
+  height: 12px;
+  object-fit: cover;
+  width: 1px;
+}
+
+.label-value {
+  color: #000000; /* ✅ 공통 색상 */
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+  margin-top: -1px;
+}

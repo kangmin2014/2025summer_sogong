@@ -1,0 +1,92 @@
+.project-achievements-edit-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 384px;
+  position: absolute;
+}
+
+.project-achievements-edit-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.project-achievements-edit-title {
+  font-family: 'Pretendard-SemiBold', Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+
+.add-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.add-button-icon {
+  width: 15.8999px;
+  height: 16px;
+}
+
+.project-achievements-edit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding-bottom: 14px;
+}
+
+.achievement-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.month-display {
+  width: 60px;
+  height: 24px;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.hidden-month {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.achievement-description-input {
+  flex: 1;
+  height: 24px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button-icon {
+  width: 14px;
+  height: 18px;
+}

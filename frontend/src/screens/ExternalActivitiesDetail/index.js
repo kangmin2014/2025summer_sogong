@@ -1,0 +1,1 @@
+export { ExternalActivitiesDetail } from "./ExternalActivitiesDetail";

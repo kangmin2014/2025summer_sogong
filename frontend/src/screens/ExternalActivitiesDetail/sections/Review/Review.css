@@ -1,0 +1,35 @@
+/* Review.css */
+
+.review .external-activities-screen {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.review .external-activities-screen .external-activities {
+  background-color: #ffffff;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.review .external-activities-screen .overlap-group {
+  background-color: #ffffff;
+  height: 2732px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 페이지네이션 위치 조정 */
+.review .detail-pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}

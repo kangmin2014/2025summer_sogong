@@ -1,0 +1,111 @@
+.external-activities-team {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: auto;
+
+  border: none;
+}
+
+.external-activities-team .overlap-group-wrapper {
+  background-color: #ffffff;
+  height: auto;
+  width: 100%;
+  border: none;
+}
+
+.external-activities-team .overlap-group {
+  background-color: #ffffff;
+  height: 100%;
+  position: relative;
+  border: none;
+}
+
+.external-activities-team .teamrecruit-team {
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #b1b1b1;
+  display: flex;
+  justify-content: space-between;
+  /* left: 120px; */
+  padding: 24px 0px;
+  position: absolute;
+  /* top: 562px; */
+  width: 100%;
+}
+
+.external-activities-team .div-wrapper {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  height: 28px;
+  justify-content: center;
+  position: relative;
+}
+
+.external-activities-team .text-3 {
+  color: #000000;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  /* font-weight: 700; */
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.50px;
+  position: relative;
+  width: fit-content;
+}
+
+.external-activities-team .review-count {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+}
+
+.external-activities-team .text-wrapper-2 {
+  color: #a3a3a3;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.external-activities-team .teamframe {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 12px;
+  padding: 0;
+  padding-top: 24px;
+  margin-bottom: 36px;
+  position: absolute;
+  top: 76px;
+  width: 792px;
+  border: none;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.external-activities-team .recruitment-box-instance {
+  flex: 0 0 auto !important;
+}
+
+.external-activities-team .button-box-instance {
+  position: absolute !important;
+  top: 450px !important;
+}
+.externalteam-nickname {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+}

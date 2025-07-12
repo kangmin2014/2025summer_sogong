@@ -2,12 +2,8 @@ import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 import "./ProjectAchievementsSection.css";
 
-export const ProjectAchievementsSection = () => {
-  const achievements = [
-    { date: "2025.02", description: "AI학습법 아이디어톤 우수상" },
-    { date: "2024.05", description: "숭실대학교 Wish 해커톤 금상" },
-    { date: "2023.09", description: "SSU 소프트웨어 공모전 본선 진출 / 대상" },
-  ];
+export const ProjectAchievementsSection = ({ project_achievements }) => {
+  const achievements = project_achievements || [];
 
   return (
     <Card className="project-achievements-card">
@@ -17,13 +13,18 @@ export const ProjectAchievementsSection = () => {
         </div>
 
         <div className="project-achievements-list">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="achievement-row">
-              <div className="achievement-date">{achievement.date}</div>
-              <div className="achievement-description">{achievement.description}</div>
-            </div>
-          ))}
+          {achievements.length > 0 ? (
+            achievements.map((achievement, index) => (
+              <div key={index} className="achievement-row">
+                <div className="achievement-date">{achievement.date}</div>
+                <div className="achievement-description">{achievement.description}</div>
+              </div>
+            ))
+          ) : (
+            <div className="project-achievements-empty">등록된 프로젝트 성과가 없습니다.</div>
+          )}
 
+          {/* 빈칸 채우기 (선택사항) */}
           {[...Array(4)].map((_, index) => (
             <div key={`empty-${index}`} className="achievement-row">
               <div className="achievement-date"></div>

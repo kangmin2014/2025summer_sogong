@@ -50,10 +50,11 @@ export const Login = ({ onLogout, data }) => {
 
       setNickname(data.user.nickname);
 
-      // 프로필 이미지가 있다면 아래 코드 활성화
-      // if (data.user.profileimg) {
-      //   setProfileimg(data.user.profileimg);
-      // }
+    
+       if (data.user.profile_img) {
+         setProfileimg(data.user.profile_img);
+       }
+
     } catch (error) {
       console.error("Error fetching nickname:", error);
     }
@@ -86,7 +87,7 @@ export const Login = ({ onLogout, data }) => {
             </Avatar>
 
             <div className="login-user-info">
-              <div className="nickname">{nickname || "닉네임 없"}</div>
+              <div className="nickname">{nickname || "닉네임 없음"}</div>
               <Button variant="link" className="profile-detail-btn" onClick={goToMyPage}>
                 프로필 상세 정보
                 <img
