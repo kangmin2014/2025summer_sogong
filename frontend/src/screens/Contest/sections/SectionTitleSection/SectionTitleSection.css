@@ -1,0 +1,81 @@
+.contest-section-title {
+  width: auto;
+  position: absolute;
+  top: 300px;
+  /* left: 359px; */
+  left: 53.5%; /* ← 가로 중앙 기준 */
+  transform: translateX(-50%); /* ← 중앙 정렬 */
+
+  display: inline-flex;
+  height: 85px;
+  padding-top: 44px;
+  padding-bottom: 12px;
+  padding-left: 120px;
+  padding-right: 0;
+  gap: 8px;
+  align-items: center;
+}
+
+.contest-section-title .contest-section-title-text {
+  font-family: 'Pretendard-Bold', Helvetica;
+  font-size: 24px;
+  color: black;
+  white-space: nowrap;
+}
+
+.contest-section-title .section-controls {
+  width: 805px;
+  height: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contest-section-title .section-controls-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contest-section-title .section-result-count {
+  font-family: 'Pretendard-Medium', Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  color: #a5a5a5;
+}
+
+.contest-section-title .section-sort-options {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.contest-section-title .sort-button {
+  padding: 0;
+  height: auto;
+  font-size: 14px;
+  background: transparent;
+
+  border: none;
+  cursor: pointer;
+}
+
+.contest-section-title .sort-button-active {
+  font-family: 'Pretendard-SemiBold', Helvetica;
+  font-weight: 600;
+  color: black;
+}
+
+.contest-section-title .sort-button-inactive {
+  font-family: 'Pretendard-Medium', Helvetica;
+  font-weight: 500;
+  color: #a5a5a5;
+}
+
+.contest-section-title .sort-divider {
+  width: 1px;
+  height: 13px;
+  object-fit: cover;
+}

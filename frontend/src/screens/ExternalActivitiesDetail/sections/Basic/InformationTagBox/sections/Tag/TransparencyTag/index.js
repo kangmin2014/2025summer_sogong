@@ -1,0 +1,1 @@
+export { TransparencyTag } from "./TransparencyTag";

@@ -1,0 +1,107 @@
+.activity-summary-edit-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 384px;
+  align-items: flex-start;
+  position: absolute;
+}
+
+.activity-summary-edit-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  padding: 16px 0;
+}
+
+.activity-summary-edit-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.add-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.add-button-icon {
+  width: 15.8999px;
+  height: 16px;
+}
+
+.activity-summary-edit-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.activity-summary-edit-item {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  /* gap: 5px; */
+}
+
+.activity-input.text-month {
+  width: 65px;
+  height: 24px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+}
+
+.activity-input.description {
+  margin-left: 5px;
+  flex: 1;
+  height: 24px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button-icon {
+  width: 14px;
+  height: 18px;
+}
+
+.tilde {
+  margin: 0 2px;
+  font-weight: bold;
+}
+
+.month-display {
+  width: 40px;
+  height: 24px;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.hidden-month {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}

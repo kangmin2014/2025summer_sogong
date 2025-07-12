@@ -1,0 +1,33 @@
+.dday-box {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.dday-box .text {
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.dday-box.long-term .text {
+  color: #a3a3a3; /* 회색 */
+}
+
+.dday-box.short-term .text {
+  color: #0094ff; /* 파란색 */
+}
+
+.dday-box.today .text {
+  color: #ff0000; /* 빨간색 */
+  text-align: center;
+}

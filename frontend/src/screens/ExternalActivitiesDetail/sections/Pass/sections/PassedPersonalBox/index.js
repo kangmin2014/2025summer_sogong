@@ -1,0 +1,1 @@
+export { PassedPersonalBox } from "./PassedPersonalBox";

@@ -2,17 +2,9 @@ import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 import "./ActivityRecordsSection.css";
 
-export const ActivityRecordsSection = () => {
-  const languageData = [
-    { date: "2022.07", description: "TOEIC 920점" },
-  ];
-
-  const certificationData = [
-    { date: "2023.05", description: "GTQ 포토샵 1급" },
-    { date: "2022.09", description: "컴퓨터 활용 능력 1급" },
-    { date: "", description: "" },
-    { date: "", description: "" },
-  ];
+export const ActivityRecordsSection = ({ certifications, language_tests }) => {
+  const languageData = language_tests || [];
+  const certificationData = certifications || [];
 
   return (
     <section className="activity-section">
@@ -24,22 +16,30 @@ export const ActivityRecordsSection = () => {
         <CardContent className="activity-card-content">
           <div className="record-group">
             <h3 className="record-group-title">어학</h3>
-            {languageData.map((item, index) => (
-              <div key={`language-${index}`} className="record-item">
-                <div className="record-date">{item.date}</div>
-                <div className="record-desc">{item.description}</div>
-              </div>
-            ))}
+            {languageData.length > 0 ? (
+              languageData.map((item, index) => (
+                <div key={`language-${index}`} className="record-item">
+                  <div className="record-date">{item.date}</div>
+                  <div className="record-desc">{item.score || item.description}</div>
+                </div>
+              ))
+            ) : (
+              <div>등록된 어학 기록이 없습니다.</div>
+            )}
           </div>
 
           <div className="record-group certification-group">
             <h3 className="record-group-title">자격증</h3>
-            {certificationData.map((item, index) => (
-              <div key={`certification-${index}`} className="record-item">
-                <div className="record-date certification-date">{item.date}</div>
-                <div className="record-desc">{item.description}</div>
-              </div>
-            ))}
+            {certificationData.length > 0 ? (
+              certificationData.map((item, index) => (
+                <div key={`certification-${index}`} className="record-item">
+                  <div className="record-date certification-date">{item.date}</div>
+                  <div className="record-desc">{item.name || item.description}</div>
+                </div>
+              ))
+            ) : (
+              <div>등록된 자격증 기록이 없습니다.</div>
+            )}
           </div>
         </CardContent>
       </Card>

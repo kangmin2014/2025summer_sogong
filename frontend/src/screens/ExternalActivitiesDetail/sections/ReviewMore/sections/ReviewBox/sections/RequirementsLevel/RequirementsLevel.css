@@ -1,0 +1,43 @@
+.requirements-container {
+  align-items: center;
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  padding: 4px 8px;
+  position: relative;
+}
+
+.requirements-container .requirements {
+  color: #696665;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.requirements-container .line {
+  height: 12px;
+  object-fit: cover;
+  position: relative;
+  width: 1px;
+}
+
+.requirements-container .requirements-label {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+  color: #000000;
+}

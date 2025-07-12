@@ -1,0 +1,21 @@
+/* ReportButton.css */
+
+.frame {
+  align-items: center;
+  border: 1px solid;
+  border-color: #b3b3b3;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  height: 48px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  width: 48px;
+}
+
+.frame .report-icon {
+  height: 24px;
+  position: relative;
+  width: 23px;
+}

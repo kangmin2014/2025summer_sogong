@@ -1,6 +1,6 @@
 // PaginationSection.jsx
 
-import React, { useState } from "react";
+import React from "react";
 import {
   Pagination,
   PaginationContent,
@@ -11,23 +11,22 @@ import {
 } from "../../../../components/ui/pagination";
 import "./PaginationSection.css";
 
-export const PaginationSection = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 10;
-
+export const PaginationSection = ({ currentPage, totalPages, onPageChange }) => {
   const handlePageChange = (page) => {
-    setCurrentPage(page);
+    if (page >= 1 && page <= totalPages && page !== currentPage) {
+      onPageChange(page);
+    }
   };
 
   const handlePrevious = () => {
     if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+      onPageChange(currentPage - 1);
     }
   };
 
   const handleNext = () => {
     if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
+      onPageChange(currentPage + 1);
     }
   };
 
@@ -38,6 +37,7 @@ export const PaginationSection = () => {
           onClick={handlePrevious}
           className="pagination-prev"
           aria-label="Go to previous page"
+          disabled={currentPage === 1}
         >
           <img
             className="pagination-prev-icon"
@@ -68,6 +68,7 @@ export const PaginationSection = () => {
           onClick={handleNext}
           className="pagination-next"
           aria-label="Go to next page"
+          disabled={currentPage === totalPages}
         >
           <img
             className="pagination-next-icon"

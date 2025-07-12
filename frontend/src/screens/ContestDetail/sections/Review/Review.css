@@ -1,0 +1,172 @@
+.review-page {
+  width: 100%;
+  background: #fff;
+  padding: 0 24px;
+}
+
+/* 제목 */
+.review-title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b1b1b1;
+  padding: 24px 0;
+}
+
+.reviewtitlebox-text {
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  color: #000;
+}
+
+.contest-detail-text-wrapper {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+/* 리뷰 박스 */
+.review-box2 {
+  border-bottom: 1px solid #b1b1b1;
+  padding: 16px 0;
+}
+
+.review-detail-box {
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+}
+
+.profile-box {
+  display: flex;
+  gap: 12px;
+}
+
+.profile {
+  width: 32px;
+  height: 32px;
+}
+
+.profile-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contest-div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  vertical-align: baseline;
+}
+
+
+.more-button-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+
+.nickname {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 14px;
+}
+
+.arrow {
+  width: 5px;
+  height: 9px;
+}
+
+.info-box {
+  display: flex;
+  gap: 8px;
+}
+
+.review-star {
+  display: flex;
+}
+
+.star {
+  width: 11.41px;
+  height: 10.85px;
+}
+
+.contest-review-title-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  gap: 10px;
+}
+
+.contest-text-wrapper-2 {
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 18px;
+  color: #000;
+}
+
+.contest-text {
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.img {
+  width: 5px;
+  height: 8px;
+}
+
+.contest-review-text-box {
+  margin-top: 8px;
+}
+
+.p {
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 14px;
+  color: #a3a3a3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.like-comment {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+/* 페이지네이션 */
+.contest-detail-pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 48px;
+  padding-bottom: 72px;
+}
+
+.contest-detail-pagination-wrapper button {
+  background: none;
+  border: none;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 16px;
+  cursor: pointer;
+  color: #a5a5a5;
+}
+
+.contest-detail-pagination-wrapper button.active {
+  color: #0094ff;
+}
+
+.contest-detail-pagination-wrapper button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+

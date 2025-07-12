@@ -1,0 +1,95 @@
+/* Pass.css */
+
+.external-activities-pass {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 792px;
+}
+
+.external-activities-pass .overlap-group-wrapper {
+  background-color: #ffffff;
+  height: auto;
+  width: 100%;
+}
+
+.external-activities-pass .overlap-group {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column; /* 세로 방향 정렬 */
+  align-items: center; /* 가운데 정렬 */
+  /* gap: 48px; 요소 사이 간격 */
+}
+
+
+.external-activities-pass .passed-person-box {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.external-activities-pass .review-title-box {
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #b1b1b1;
+  display: flex;
+  gap: 591px;
+  justify-content: left;
+  padding: 24px 0px;
+  position: absolute;
+  width: 100%;
+}
+
+.external-activities-pass .pass-text-3 {
+  color: #000000;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  /* font-weight: 700; */
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.50px;
+  position: relative;
+  width: fit-content;
+}
+
+.external-activities-pass .overlap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left; /* 가운데 정렬 */
+  gap: 24px; /* 박스 간격 */
+  width: 100%;
+  padding: 100px 0 40px;
+}
+
+
+.external-activities-pass .button-box-instance {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.introduction-person-box {
+  position: relative;
+}
+
+.external-activities-pass .introduction-title {
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #b1b1b1;
+  display: flex;
+  gap: 591px;
+  justify-content: left;
+  padding: 24px 0px;
+  position: absolute;
+  /* top: 500px; */
+  width: 100%;
+}
+
+.external-activities-pass .button-box-2 {
+  left: 120px !important;
+  position: absolute !important;
+  top: 1826px !important;
+}

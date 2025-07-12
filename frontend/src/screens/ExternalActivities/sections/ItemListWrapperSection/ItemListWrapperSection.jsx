@@ -1,10 +1,37 @@
 import React from "react";
 import { Button } from "../../../../components/ui/button1";
+import { useNavigate } from "react-router-dom";
 import "./ItemListWrapperSection.css";
 
+  const getDdayElement = (deadlineStr) => {
+    if (!deadlineStr) {
+      return <span className="dday-text undecided">미정</span>;
+    }
+
+    const today = new Date();
+    const deadline = new Date(deadlineStr);
+    const diffTime = deadline.setHours(0, 0, 0, 0) - today.setHours(0, 0, 0, 0);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays < 0) {
+      return null; // 마감 지난 경우: 아무것도 표시 안 함
+    } else if (diffDays === 0) {
+      return <span className="dday-text today">오늘마감</span>;
+    } else if (diffDays <= 7) {
+      return <span className="dday-text short">D-{diffDays}</span>;
+    } else {
+      return <span className="dday-text long">D-{diffDays}</span>;
+    }
+  };
 export const ItemListWrapperSection = ({ activities }) => {
+  const navigate = useNavigate(); // ✅ navigation 함수
+
   if (!activities || activities.length === 0) {
-    return <p className="no-results">결과가 없습니다.</p>;
+    return (
+      <div className="item-wrapper">
+        <p className="no-results">결과가 없습니다.</p>
+      </div>
+    );
   }
 
   return (
@@ -17,7 +44,8 @@ export const ItemListWrapperSection = ({ activities }) => {
               <img
                 className="item-thumbnail"
                 alt={item.title}
-                src={item.thumbnail || "/img/default-thumbnail.jpg"}
+                //src={"/img/poster.png"}
+                src={item.thumbnail}
               />
             </div>
           </div>
@@ -25,7 +53,14 @@ export const ItemListWrapperSection = ({ activities }) => {
           {/* 활동 내용 */}
           <div className="item-content">
             <div className="item-text-group">
-              <div className="item-title">{item.title}</div>
+              {/* ✅ 클릭 시 /hello 이동 */}
+              <div
+                className="item-title"
+                 onClick={() => navigate(`/ExternalActivitiesDetail/${item.id}`)}
+              >
+                {item.title}
+              </div>
+
               <div className="item-subtitle">{item.company}</div>
               <div className="item-category">{item.institution_tags}</div>
 
@@ -40,9 +75,11 @@ export const ItemListWrapperSection = ({ activities }) => {
             </div>
 
             <div className="item-meta">
-              <div className="item-deadline">
-                마감일: {item.deadline || "미정"}
-              </div>
+              {getDdayElement(item.deadline) && (
+                <div className="item-deadline">
+                  {getDdayElement(item.deadline)}
+                </div>
+              )}
 
               <div className="item-views">
                 <img
@@ -57,6 +94,7 @@ export const ItemListWrapperSection = ({ activities }) => {
                 <span className="item-meta-text">댓글</span>
                 <span className="item-meta-text">{item.comment_count}</span>
               </div>
+            
             </div>
           </div>
 

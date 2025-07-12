@@ -1,9 +1,37 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./HeaderWrapper.css";
 
 export const HeaderWrapper = ({ className }) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState("");
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setActiveTab(""); // 홈 예외
+    } else if (location.pathname.startsWith("/ExternalActivities")) {
+      setActiveTab("/ExternalActivities");
+    } else if (location.pathname.startsWith("/Contest")) {
+      setActiveTab("/Contest");
+    } else if (location.pathname.startsWith("/Study")) {
+      setActiveTab("/Study");
+    } else if (location.pathname.startsWith("/Board")) {
+      setActiveTab("/Board");
+    } else {
+      setActiveTab(""); // 기본값
+    }
+  }, [location.pathname]);
+
+
+  const handleClick = (path) => {
+    navigate(path);
+    if (path === "/") {
+      setActiveTab(""); // 홈은 예외 처리
+    } else {
+      setActiveTab(path);
+    }
+  };
 
   return (
     <div className={`header-wrapper ${className}`}>
@@ -11,7 +39,7 @@ export const HeaderWrapper = ({ className }) => {
         <div className="logo-section">
           <p className="logo-text">
             <button
-              onClick={() => navigate("/")}
+              onClick={() => handleClick("/")}
               style={{ all: "unset", cursor: "pointer" }}
             >
               <span className="logo-green">TEAM</span>
@@ -21,10 +49,12 @@ export const HeaderWrapper = ({ className }) => {
         </div>
 
         <div className="profile-container">
-          {/* ✅ 겹쳐지는 24px 버튼 */}
           <button
             className="mypage-overlay-button"
-            onClick={() => navigate("/MyPage")}
+            onClick={() => {
+              const isLoggedIn = localStorage.getItem("isLoggedIn");
+              navigate(isLoggedIn === "true" ? "/MyPage" : "/Login");
+            }}
           />
           <img
             className="profile-button"
@@ -36,11 +66,36 @@ export const HeaderWrapper = ({ className }) => {
 
       <div className="header-menu">
         <div className="nav-links">
-          <button className="nav-item" onClick={() => navigate("/")}>홈</button>
-          <button className="nav-item" onClick={() => navigate("/ExternalActivities")}>대외활동</button>
-          <button className="nav-item" onClick={() => navigate("/")}>공모전</button>
-          <button className="nav-item" onClick={() => navigate("/")}>스터디</button>
-          <button className="nav-item" onClick={() => navigate("/")}>게시판</button>
+          <button
+            className={`nav-item ${activeTab === "" ? "active" : ""}`}
+            onClick={() => handleClick("/")}
+          >
+            홈
+          </button>
+          <button
+            className={`nav-item ${activeTab === "/ExternalActivities" ? "active" : ""}`}
+            onClick={() => handleClick("/ExternalActivities")}
+          >
+            대외활동
+          </button>
+          <button
+            className={`nav-item ${activeTab === "/Contest" ? "active" : ""}`}
+            onClick={() => handleClick("/Contest")}
+          >
+            공모전
+          </button>
+          <button
+            className={`nav-item ${activeTab === "/Study" ? "active" : ""}`}
+            onClick={() => handleClick("/Study")}
+          >
+            스터디
+          </button>
+          <button
+            className={`nav-item ${activeTab === "/Board" ? "active" : ""}`}
+            onClick={() => handleClick("/Board")}
+          >
+            게시판
+          </button>
         </div>
 
         <div className="search-bar">

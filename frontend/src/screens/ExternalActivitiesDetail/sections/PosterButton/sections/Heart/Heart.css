@@ -1,0 +1,14 @@
+.heart-icon {
+  background-size: 100% 100%;
+  height: 21px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.heart-icon.off {
+  background-image: url('./noheart.svg');
+}
+
+.heart-icon.on {
+  background-image: url('./heart.svg');
+}

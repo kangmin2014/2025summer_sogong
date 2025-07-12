@@ -1,0 +1,239 @@
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ───── TitleBox ───── */
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.textbox-text {
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  color: #000000;
+}
+
+.serve-information {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.view-box,
+.comment-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.eye-icon,
+.bubble-icon {
+  width: 20px;
+  height: 13px;
+}
+
+.text-wrapper {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+/* ───── Basic Information ───── */
+.basicinformationbox .basic-information {
+  display: inline-flex;
+  gap: 40px;
+  padding: 0 0 48px;
+  align-items: flex-start;
+}
+
+.first-detail,
+.second-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.first-detail {
+  width: 368px;
+}
+
+.second-detail {
+  width: 384px;
+}
+
+.div,
+.div-2,
+.target-box,
+.form-box,
+.homepage-box {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.div {
+  align-items: center;
+}
+
+.div-2,
+.target-box,
+.form-box,
+.homepage-box {
+  align-items: flex-start;
+}
+
+.text-wrapper {
+  color: #000000;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.text-wrapper-2 {
+  top: 1px;
+  color: #000000;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.receipt-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.div-3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.line {
+  width: 1px;
+  height: 11px;
+  object-fit: cover;
+}
+
+.recruitment-detail {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.preference-detail {
+  color: #000000;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  width: 292px;
+  line-height: normal;
+  margin-top: -1px;
+}
+
+/* ───── 활동 정보 태그 ───── */
+.title-wrapper {
+  padding: 24px 0;
+}
+
+.title-2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 28px;
+}
+
+.contest-text-7 {
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  color: #000000;
+}
+
+.information-tag-box {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  padding: 0 0 48px;
+  width: 792px;
+}
+
+.tag-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.basic-text-wrapper-3 {
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 16px;
+  color: #000000;
+  white-space: nowrap;
+  width: 104px; /* 고정 너비 */
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.tag-row .tag {
+  margin-right: 8px;
+  background-color: #e6ecf0;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px #00000040;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 12px;
+  color: #596e7a;
+  padding: 4px 8px;
+  white-space: nowrap;
+  width: fit-content;
+  font-weight: 600;
+}
+
+/* ───── 상세 내용 ───── */
+.overlap {
+  width: 100%;
+}
+
+.title-box-2 {
+  display: flex;
+  align-items: flex-start;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.contest-text-6 {
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  color: #000000;
+}
+
+.detail-information {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  gap: 16px;
+  width: 100%;
+}
+
+.element {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 24px;
+  white-space: pre-line;
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../../../../components/ui/button1";
 import "./SectionTitleSection.css";
 
-export const SectionTitleSection = ({ sortBy, setSortBy }) => {
+export const SectionTitleSection = ({ sortBy, setSortBy, totalCount }) => {
   const sortOptions = [
     { id: "view_count", label: "조회순" },
     { id: "rating", label: "높은평점순" },
@@ -12,6 +12,9 @@ export const SectionTitleSection = ({ sortBy, setSortBy }) => {
   const handleSortChange = (option) => {
     setSortBy(option.id);
   };
+
+  // 숫자 1000단위 쉼표 표시 예: 2414 → 2,414
+  const formattedCount = totalCount.toLocaleString();
 
   return (
     <section
@@ -30,7 +33,7 @@ export const SectionTitleSection = ({ sortBy, setSortBy }) => {
             role="status"
             aria-label="검색 결과 수"
           >
-            (2,414)
+            ({formattedCount})
           </div>
 
           <nav

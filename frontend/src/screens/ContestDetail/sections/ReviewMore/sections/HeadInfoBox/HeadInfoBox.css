@@ -1,0 +1,111 @@
+.head-info-box {
+  align-items: flex-start;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #b1b1b1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 792px;
+}
+
+.head-info-box .title {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 24px 0px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.head-info-box .text {
+  color: #000000;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 24px;
+  /* font-weight: 700; */
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.head-info-box .information-box {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  padding: 0px 0px 12px;
+  position: relative;
+  width: 100%;
+}
+
+.head-info-box .profile-box {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px;
+  position: relative;
+}
+
+.head-info-box .profile {
+  height: 32px;
+  object-fit: cover;
+  position: relative;
+  width: 32px;
+}
+
+.head-info-box .ID {
+  color: #000000;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.head-info-box .date {
+  color: #a3a3a3;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.head-info-box .view-scrap {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  position: relative;
+}
+
+.head-info-box .div {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+}
+
+.head-info-box .text-wrapper {
+  color: #a3a3a3;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}

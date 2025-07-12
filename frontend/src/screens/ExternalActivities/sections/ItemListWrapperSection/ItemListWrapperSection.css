@@ -15,7 +15,6 @@
   z-index: 0;
 }
 
-
 .item-image-wrapper {
   display: flex;
   width: 270px;
@@ -31,7 +30,8 @@
   align-items: flex-end;
   padding: 12px;
   border-radius: 12px;
-  background-image: url("https://c.animaapp.com/JL2GbBWa/img/picture-2@2x.png");
+  /* background-image: url("https://c.animaapp.com/JL2GbBWa/img/picture-2@2x.png"); */
+  /*background-color: aqua;*/
   background-size: cover;
   background-position: center;
 }
@@ -59,8 +59,10 @@
 .item-title {
   font-family: "Pretendard-Bold", Helvetica;
   font-size: 24px;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: black;
+
+  cursor: pointer;
 }
 
 .item-subtitle,
@@ -186,4 +188,44 @@
   font-family: "Pretendard-Regular", Helvetica;
   font-size: 16px;
   color: #b1b1b1;
+}
+
+.no-results {
+  display: inline-flex;
+  width: 100%;
+  max-width: 962px;
+  background-color: white;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.item-thumbnail {
+  width: 246px;
+  height: 246px;
+  display: flex;
+}
+
+.dday-text {
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.dday-text.today {
+  color: #ff0000;
+}
+
+.dday-text.short {
+  color: #0094ff;
+}
+
+.dday-text.long {
+  color: #a3a3a3;
+}
+
+.dday-text.undecided {
+  color: #c0c0c0;
 }

@@ -1,0 +1,1 @@
+export { NoriskTag } from "./NoriskTag";
